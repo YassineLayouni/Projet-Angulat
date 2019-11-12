@@ -1,0 +1,30 @@
+#background{
+    height : 100vh;
+    width : 100vw;
+    position: fixed;
+    top : 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -2;
+    background-repeat: no-repeat;
+}
+
+#logo{
+    z-index : +2;
+    position : fixed;
+    transform: scale(0.6);
+    top : 1.4%;
+    left : 2%;
+}
+a{
+   color : #F96167 !important;
+   font-size : 1.3vw;
+   font-weight: 300;
+}
+li{
+    margin-right : 2vw;
+    margin-left : 2vw;
+}
+a:hover{
+    text-decoration: underline;
+}

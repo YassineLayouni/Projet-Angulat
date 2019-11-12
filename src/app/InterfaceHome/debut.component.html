@@ -1,0 +1,26 @@
+<div class="container-fluid">
+<nav class="navbar navbar-expand-sm  navbar-dark fixed-top" style="position:-webkit-sticky">
+    <ul class="navbar-nav" style="margin-left:36vw;margin-top : 0">
+            <li class="nav-item">
+              <a class="nav-link" href="#Artists">Artists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Albums">Albums</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Music">Music</a>
+            </li>
+    </ul>
+</nav>
+    <img class="img-fluid" id="logo" src="../assets/Logo.png">
+    <img class="img-fluid" id="background" src="../assets/Background.jpg"/>
+
+    <div id="Artists" style="margin-top : 25vh;">
+        <ng-container *ngFor="let t of list.tabArtists;let indice=index">
+            <app-display-artist [artist]="t" style="float :left"></app-display-artist>
+        </ng-container>
+        <a href="#"><img src="../assets/Add.png" width="100vw" height="100vh" style="margin-top : 18vh;margin-left:7vw ;" ></a>
+    </div>
+    <div id="Albums"></div>
+    <div id="Music"></div>
+</div>

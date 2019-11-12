@@ -1,0 +1,32 @@
+<div class="container-fluid">
+<div [ngStyle]="{'border-color':btnChangeColor}" id="menuBtn" (mouseover)="expandLines()" (mouseout)="shrinkLines()" (click)="buttonclick = !buttonclick;checkMenuBtn()">
+    <ng-container *ngIf="!buttonclick">
+        <hr [ngStyle]="{width : widthLines}"/>
+        <hr [ngStyle]="{width : widthLines}"/>
+        <hr [ngStyle]="{width : widthLines}"/>
+    </ng-container>
+    <ng-container *ngIf="buttonclick">
+        <h1 id="closeBtn" [ngStyle]="{transform : closeScale, color : btnChangeColor}">X</h1>
+    </ng-container> 
+</div>
+</div>
+<div class="container-fluid">
+<div id="menu" [ngStyle]="{left : menuLeft,'transition-delay':menuReturnDelay}" class="img-fluid">
+    <div id="innerMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link interface" [ngStyle]="{opacity : interfaceOpacity}" href="#">{{acceuil|avantAcceuil}}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link interface" style="transition-delay:0.2s" [ngStyle]="{opacity : interfaceOpacity}" href="#">{{chercher|logoChercher}}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link interface" style="transition-delay:0.3s" [ngStyle]="{opacity : interfaceOpacity}" href="#">{{liked|avantPlaylist}}</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link interface" style="transition-delay:0.45s" [ngStyle]="{opacity : interfaceOpacity}" href="#">{{loginOrSignUp|avantLogin}}</a>
+        </li>
+    </ul>
+    </div>
+</div>
+</div>
