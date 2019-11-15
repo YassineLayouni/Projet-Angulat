@@ -8,14 +8,6 @@
     z-index: -2;
     background-repeat: no-repeat;
 }
-
-#logo{
-    z-index : +2;
-    position : fixed;
-    transform: scale(0.6);
-    top : 1.4%;
-    left : 2%;
-}
 a{
    color : #F96167 !important;
    font-size : 1.3vw;
