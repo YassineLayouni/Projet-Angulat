@@ -32,3 +32,10 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width : 1070px)
+{
+    #HomeNav
+    {
+        visibility: hidden;
+    }
+}

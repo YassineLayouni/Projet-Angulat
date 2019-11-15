@@ -9,7 +9,7 @@ export class MenuComponent implements OnInit {
   widthLines : string = "40%";
   closeScale : string = "scale(1)";
   buttonclick : boolean = false;
-  menuLeft : string = "-25vw";
+  menuWidth : string = "0";
   btnChangeColor : string = "#10316b";
   interfaceOpacity : string = "0";
   menuReturnDelay : string ="0";
@@ -31,13 +31,13 @@ export class MenuComponent implements OnInit {
   checkMenuBtn(){
     if(this.buttonclick){
       this.menuReturnDelay = "0s";
-      this.menuLeft = "0";
+      this.menuWidth = "520px";
       this.btnChangeColor = "#FCE77D";
       this.interfaceOpacity = "1";
     }
     else{
       this.menuReturnDelay = "0.7s";
-      this.menuLeft = "-25vw";
+      this.menuWidth = "0";
       this.btnChangeColor = "#10316b";
       this.interfaceOpacity = "0";
     }

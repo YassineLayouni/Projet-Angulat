@@ -1,4 +1,4 @@
-<nav id="Menu" class="navbar navbar-expand-lg static-loop">
+
  <a class="navbar-brand" href="#"><img class="img-fluid" id="logo" src="../assets/Logo.png"></a>
  <div class="container-fluid">
   <div [ngStyle]="{'border-color':btnChangeColor}" id="menuBtn" (mouseover)="expandLines()" (mouseout)="shrinkLines()" (click)="buttonclick = !buttonclick;checkMenuBtn()">
@@ -13,7 +13,7 @@
   </div>
  </div>
 <div class="container-fluid">
-<div id="menu" [ngStyle]="{left : menuLeft,'transition-delay':menuReturnDelay}">
+<div id="menu" [ngStyle]="{width : menuWidth,'transition-delay':menuReturnDelay}">
     <div id="innerMenu">
     <ul class="nav flex-column">
         <li class="nav-item">
@@ -32,4 +32,4 @@
     </div>
 </div>
 </div>
-</nav>
+
