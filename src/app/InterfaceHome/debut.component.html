@@ -19,7 +19,9 @@
         <ng-container *ngFor="let t of list.tabArtists;let indice=index">
             <app-display-artist [artist]="t" style="float :left"></app-display-artist>
         </ng-container>
-        <a href="#"><img src="../assets/Add.png" width="100vw" height="100vh" style="margin-top : 18vh;margin-left:7vw ;" ></a>
+        <div class="card">
+              <a href="#"><img src="../assets/Add.png" width="100vw"></a>
+        </div>
     </div>
     <div id="Albums"></div>
     <div id="Music"></div>

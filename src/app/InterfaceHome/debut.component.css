@@ -28,3 +28,15 @@ li{
 a:hover{
     text-decoration: underline;
 }
+.card{
+    top : 5vh;
+    left : 1vw;
+    width:344px;
+    height : 410px;
+    background-color : rgba(0,0,0,0);
+    border : 0px;
+    transition: all 2 ease;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
