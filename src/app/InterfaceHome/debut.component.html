@@ -16,7 +16,7 @@
     <img class="img-fluid" id="background" src="../assets/Background.jpg"/>
 
     <div id="Artists" style="margin-top : 25vh;">
-        <ng-container *ngFor="let t of list;let indice=index">
+        <ng-container *ngFor="let t of listArtists;let indice=index">
             <app-display-artist [artist]="t" style="float :left"></app-display-artist>
         </ng-container>
         <div class="card">
@@ -25,7 +25,7 @@
     </div>
     
     <div id="Albums" style="margin-top : 25vh;">
-      <ng-container *ngFor="let t of list;let indice=index">
+      <ng-container *ngFor="let t of listAlbums;let indice=index">
           <app-display-artist [artist]="t" style="float :left"></app-display-artist>
       </ng-container>
       <div class="card">
