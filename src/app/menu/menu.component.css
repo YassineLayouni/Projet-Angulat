@@ -1,6 +1,6 @@
 /*blue #10316b  yellow #FCE77D pink #F96167 */
 #menuBtn{
-    z-index: +1;
+    z-index: +6;
     position : fixed;
     border : 2px solid #10316b;
     padding : 0.85%;
@@ -42,6 +42,7 @@ hr{
     background-color: rgba(0,0,0,0.9);
     transition : width 0.5s ease;
     display : flex;
+    z-index: +5;
 
 }
 
@@ -73,7 +74,7 @@ hr{
     flex-wrap: nowrap;
 }
 #logo{
-    z-index : +2;
+    z-index : +6;
     position : fixed;
     transform: scale(0.6);
     top : 1.4%;

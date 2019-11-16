@@ -15,7 +15,7 @@ export class ListService {
   tabMusic : Music[][] = [    [new Music(this.refMusic,"Sisyphus",this.refArtist,this.refAlbum,new Date("2019"),false,0.5,false)]   ];
   
   
-  tabAlbums : Album[][] = [   [new Album(this.refAlbum,"My Finest Work Yet",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/MyFinestWorkYet.jpg",new Date("2019"),false,50,false)]      ];
+  tabAlbums : Album[][] = [   [new Album(this.refAlbum,"My Finest Work Yet",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/MyFinestWorkYetAlbum.jpg",new Date("2019"),false,50,false)]      ];
   
   
    tabArtists : Artist[] = [new Artist(this.refArtist++,"Andrew Bird",this.tabAlbums[this.refArtist],"../assets/AndrewBird.jpg",false),
