@@ -43,7 +43,6 @@ hr{
     transition : width 0.5s ease;
     display : flex;
     z-index: +5;
-
 }
 
 .interface{
@@ -56,10 +55,13 @@ hr{
     margin: 0.8vh;
     display: flex;
     flex-wrap: nowrap;
+    
 }
 .interface:hover{
     font-size: 280%;
     text-decoration: line-through;
+    transition-delay: 0s;
+    
 }
 @font-face{
     font-family: Menu;

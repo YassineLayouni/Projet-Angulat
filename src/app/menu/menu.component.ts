@@ -10,6 +10,7 @@ export class MenuComponent implements OnInit {
   closeScale : string = "scale(1)";
   buttonclick : boolean = false;
   menuWidth : string = "0";
+  menuEvents : string = "none";
   btnChangeColor : string = "#10316b";
   interfaceOpacity : string = "0";
   menuReturnDelay : string ="0";
@@ -34,12 +35,14 @@ export class MenuComponent implements OnInit {
       this.menuWidth = "520px";
       this.btnChangeColor = "#FCE77D";
       this.interfaceOpacity = "1";
+      this.menuEvents = "all";
     }
     else{
       this.menuReturnDelay = "0.7s";
       this.menuWidth = "0";
       this.btnChangeColor = "#10316b";
       this.interfaceOpacity = "0";
+      this.menuEvents = "none";
     }
 
   }

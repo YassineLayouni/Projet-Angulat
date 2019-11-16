@@ -3,7 +3,7 @@ import { Music } from './Music';
 
 export class Album{
 
-  constructor(private _ref:number,private _name:string,private _refArtist:number,private _tabMusic:Music[],private _photoSrc:string,private _releaseDate:Date,private _liked:boolean,private _price:number,private _cart:boolean) { }
+  constructor(private _ref:number,private _name:string,private _refArtist:number,private _tabMusic:Music[],private _photoSrc:string,private _recordPhotoSrc:string,private _releaseDate:Date,private _liked:boolean,private _price:number,private _cart:boolean) { }
   public get name():string{
     return this._name;
   }
@@ -27,6 +27,9 @@ export class Album{
   }
   public get album():Music[]{
     return this._tabMusic;
+  }
+  public get recordPhotoSrc():string{
+    return this._recordPhotoSrc;
   }
   public set cart(value:boolean){
     this._cart = value;
