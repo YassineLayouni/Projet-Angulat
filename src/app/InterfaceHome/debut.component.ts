@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { List } from '../Classes/List';
 import { Album } from '../Classes/Album';
 import { Artist } from '../Classes/Artist';
 import { Music } from '../Classes/Music';
+import { ListService } from '../list.service';
 
 @Component({
   selector: 'app-debut',
@@ -10,10 +10,15 @@ import { Music } from '../Classes/Music';
   styleUrls: ['./debut.component.css']
 })
 export class DebutComponent implements OnInit {
-  list : List = new List();
-  constructor() { }
+  listArtists;
+  listAlbums;
+  listMusic;
+  constructor(private service : ListService) { }
 
   ngOnInit() {
+    this.listArtists = this.service.tabArtists;
+    this.listAlbums = this.service.tabAlbums;
+    this.listMusic = this.service.tabMusic;
   }
 
 }

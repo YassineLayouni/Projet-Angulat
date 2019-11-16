@@ -12,7 +12,6 @@ import { Music } from './Classes/Music';
 import { DisplayMusicComponent } from './display-music/display-music.component';
 import { Artist } from './Classes/Artist';
 import { Album } from './Classes/Album';
-import { List } from './Classes/List';
 import { DisplayArtistComponent } from './display-artist/display-artist.component';
 import { DisplayAlbumComponent } from './display-album/display-album.component';
 
