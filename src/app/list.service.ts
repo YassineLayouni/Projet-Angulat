@@ -15,7 +15,23 @@ export class ListService {
   tabMusic : Music[][] = [    [new Music(this.refMusic,"Sisyphus",this.refArtist,this.refAlbum,new Date("2019"),false,0.5,false)]   ];
   
   
-  tabAlbums : Album[][] = [   [new Album(this.refAlbum,"My Finest Work Yet",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/MyFinestWorkYetAlbum.jpg","../assets/MyFinestWorkYetRecord.png",new Date("2019"),false,50,false)]      ];
+  tabAlbums : Album[][] = [   [new Album(this.refAlbum++,"My Finest Work Yet",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/MyFinestWorkYetAlbum.jpg","../assets/MyFinestWorkYetRecord.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Staying At Tamara's",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/StayingAtTamaras.jpg","../assets/StayingAtTamaras.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Dream Boat Annie",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/DreamBoatAnnie.jpg","../assets/DreamBoatAnnie.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Awaken, My Love",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/AwakenMyLove.jpg","../assets/AwakenMyLove.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"The Lumineers",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/The Lumineers.jpg","../assets/The Lumineers.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Blond",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/Blond.jpg","../assets/Blond.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Carrie&Lowell",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/Carrie&Lowell.jpg","../assets/Carrie&Lowell.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"22, A Million ",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/22AMillion.jpg","../assets/22AMillion.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Yellow Brick Road",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/YellowBrickRoad.jpg","../assets/YellowBrickRoad.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Interstellar",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/Interstellar.jpg","../assets/Interstellar.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Wild Youth",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/WildYouth.jpg","../assets/WildYouth.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Dream Your Life Away",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/DreamYourLifeAway.jpg","../assets/DreamYourLifeAway.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Songs From A Room",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/SongsFromARoom.jpg","../assets/SongsFromARoom.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum++,"Z-Sides",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/Z-Sides.jpg","../assets/Z-Sides.png",new Date("2019"),false,50,false)],
+                              
+                                    
+                              ];
   
   
    tabArtists : Artist[] = [new Artist(this.refArtist++,"Andrew Bird",this.tabAlbums[this.refArtist],"../assets/AndrewBird.jpg",false),
