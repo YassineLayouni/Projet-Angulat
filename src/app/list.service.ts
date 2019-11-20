@@ -12,10 +12,17 @@ export class ListService {
   refMusic : number = 0;
   
   
-  tabMusic : Music[][] = [    [new Music(this.refMusic,"Sisyphus",this.refArtist,this.refAlbum,new Date("2019"),false,0.5,false)]   ];
+  tabMusic : Music[][] = [    [new Music(this.refMusic,"Sisyphus",this.refArtist,this.refAlbum,"../assets/MyFinestWorkYetRecord.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"Shotgun",this.refArtist,this.refAlbum,"../assets/StayingAtTamaras.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"Crazy On You",this.refArtist,this.refAlbum,"../assets/DreamBoatAnnie.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"Redbone",this.refArtist,this.refAlbum,"../assets/AwakenMyLove.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"Stubborn Love",this.refArtist,this.refAlbum,"../assets/The Lumineers.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"Self Control",this.refArtist,this.refAlbum,"../assets/Blond.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"I've Seen That Movie Too",this.refArtist,this.refAlbum,"../assets/YellowBrickRoad.png",new Date("2019"),false,0.5,false)], 
+                              ];
   
   
-  tabAlbums : Album[][] = [   [new Album(this.refAlbum++,"My Finest Work Yet",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/MyFinestWorkYetAlbum.jpg","../assets/MyFinestWorkYetRecord.png",new Date("2019"),false,50,false)],
+  tabAlbums : Album[][] = [   [new Album(this.refAlbum++,"My Finest Work Yet",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/MyFinestWorkYetAlbum.jpg","../assets/MyFinestWorkYetRecord.png",new Date("2019"),false,50,false),],
                               [new Album(this.refAlbum++,"Staying At Tamara's",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/StayingAtTamaras.jpg","../assets/StayingAtTamaras.png",new Date("2019"),false,50,false)],
                               [new Album(this.refAlbum++,"Dream Boat Annie",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/DreamBoatAnnie.jpg","../assets/DreamBoatAnnie.png",new Date("2019"),false,50,false)],
                               [new Album(this.refAlbum++,"Awaken, My Love",this.refArtist,this.rechercheListMusic(this.refAlbum),"../assets/AwakenMyLove.jpg","../assets/AwakenMyLove.png",new Date("2019"),false,50,false)],

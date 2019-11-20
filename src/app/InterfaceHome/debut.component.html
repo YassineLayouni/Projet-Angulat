@@ -26,14 +26,21 @@
     
     <div id="Albums" style="margin-top : 25vh;">
       <ng-container *ngFor="let t of listAlbums;let indice=index">
-          <ng-container *ngFor="let e of listAlbums[indice]">
-              <app-display-album [album]="e" style="float :left"></app-display-album>
-          </ng-container>
+              <app-display-album [album]="t[0]" style="float :left"></app-display-album>  
       </ng-container>
       <div class="card">
             <a href="#"><img src="../assets/Add.png" width="100vw"></a>
       </div>
   </div>
     
-  <div id="Music"></div>
+  <div id="Music" style="margin-top : 25vh;">
+    <ng-container *ngFor="let t of listMusic;let indice=index">
+            <app-display-music [music]="t[0]" style="float :left"></app-display-music>
+    </ng-container>
+    <div class="card">
+          <a href="#"><img src="../assets/Add.png" width="100vw"></a>
+    </div>
+
+  </div>
+  
 </div>

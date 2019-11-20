@@ -1,6 +1,6 @@
 export class Music{
 
-  constructor(private _ref:number,private _name:string,private _refArtist:number,private _refAlbum:number,private _releaseDate:Date,private _liked:boolean,private _price:number,private _cart:boolean){ }
+  constructor(private _ref:number,private _name:string,private _refArtist:number,private _refAlbum:number,private _photoRecord : string,private _releaseDate:Date,private _liked:boolean,private _price:number,private _cart:boolean){ }
   public get refAlbum():number{
     return this._refAlbum;
   }
@@ -15,6 +15,9 @@ export class Music{
   }
   public get releaseDate():Date{
     return this._releaseDate;
+  }
+  public get photoRecord():string{
+    return this._photoRecord;
   }
   public get liked():boolean{
     return this._liked;
