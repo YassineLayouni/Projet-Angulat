@@ -18,7 +18,14 @@ export class ListService {
                               [new Music(this.refMusic,"Redbone",this.refArtist,this.refAlbum,"../assets/AwakenMyLove.png",new Date("2019"),false,0.5,false)],
                               [new Music(this.refMusic,"Stubborn Love",this.refArtist,this.refAlbum,"../assets/The Lumineers.png",new Date("2019"),false,0.5,false)],
                               [new Music(this.refMusic,"Self Control",this.refArtist,this.refAlbum,"../assets/Blond.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic,"I've Seen That Movie Too",this.refArtist,this.refAlbum,"../assets/YellowBrickRoad.png",new Date("2019"),false,0.5,false)], 
+                              [new Music(this.refMusic,"Should Have Known Better",this.refArtist,this.refAlbum,"../assets/Carrie&Lowell.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"22, A Million",this.refArtist,this.refAlbum,"../assets/22AMillion.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"I've Seen That Movie Too",this.refArtist,this.refAlbum,"../assets/YellowBrickRoad.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"Mountains",this.refArtist,this.refAlbum,"../assets/Interstellar.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"Youth",this.refArtist,this.refAlbum,"../assets/WildYouth.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"Riptide",this.refArtist,this.refAlbum,"../assets/DreamYourLifeAway.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"The Partisan",this.refArtist,this.refAlbum,"../assets/SongsFromARoom.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic,"Asleep On The Train",this.refArtist,this.refAlbum,"../assets/Z-Sides.png",new Date("2019"),false,0.5,false)], 
                               ];
   
   
