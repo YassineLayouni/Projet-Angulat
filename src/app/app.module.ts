@@ -14,6 +14,7 @@ import { Artist } from './Classes/Artist';
 import { Album } from './Classes/Album';
 import { DisplayArtistComponent } from './display-artist/display-artist.component';
 import { DisplayAlbumComponent } from './display-album/display-album.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DisplayAlbumComponent } from './display-album/display-album.component';
     DisplayAlbumComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
