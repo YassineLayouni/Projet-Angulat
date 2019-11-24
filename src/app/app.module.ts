@@ -14,7 +14,8 @@ import { Artist } from './Classes/Artist';
 import { Album } from './Classes/Album';
 import { DisplayArtistComponent } from './display-artist/display-artist.component';
 import { DisplayAlbumComponent } from './display-album/display-album.component';
-import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,12 @@ import { AppRoutingModule } from './app-routing.module';
     AvantLoginPipe,
     DisplayMusicComponent,
     DisplayArtistComponent,
-    DisplayAlbumComponent
+    DisplayAlbumComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

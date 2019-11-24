@@ -100,3 +100,7 @@ hr{
         font-size: 150%;
     }
 }
+.active{
+    font-size: 280%;
+    text-decoration: line-through;
+}
