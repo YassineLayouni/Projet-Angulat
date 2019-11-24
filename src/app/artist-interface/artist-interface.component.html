@@ -1,0 +1,9 @@
+<div class="container-fluid">
+    <img class="img-fluid" id="background" src="../assets/Background.jpg"/> 
+    <img id="profilePic" [src]="artist.profilePhoto">
+</div>
+<div class="container">
+    <ng-container *ngFor="let t of artist.albums">
+        <app-display-album [album]="t"></app-display-album>
+    </ng-container>
+</div>

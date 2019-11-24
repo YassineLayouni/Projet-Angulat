@@ -16,6 +16,7 @@ import { DisplayArtistComponent } from './display-artist/display-artist.componen
 import { DisplayAlbumComponent } from './display-album/display-album.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { ArtistInterfaceComponent } from './artist-interface/artist-interface.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     DisplayArtistComponent,
     DisplayAlbumComponent,
     DashboardComponent,
+    ArtistInterfaceComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@
             <img class="card-img-top rounded" [src]="artist.photoSrc"/>
             <div class="card-body">
                 <h4 class="card-title" align="center">{{artist.name}}</h4>
-                <a href="#" class="stretched-link"></a>
+                <a [routerLink]="['/Home/Artist/',artist.ref]" class="stretched-link"></a>
             </div>
        </div>
 </div>
