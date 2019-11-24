@@ -1,16 +1,41 @@
-<div class="container-fluid">
+<div class="container">
     <img class="img-fluid" id="background" src="../assets/Background.jpg"/> 
     <div id="profile">
         <img id="profilePic" [src]="artist.profilePhoto">
-        <p id="name">{{artist.name}}<i class="fas fa-align-justify"></i></p>
+        <div id="nameContainer">
+            <p id="name">{{artist.name}}</p>
+        <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle-split" data-toggle="dropdown">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+            
+        </div>
         
         <i class="glyphicon glyphicon-option-vertical"></i>
     </div>
 </div>
 
-<div class="container-fluid" id="albums">
+<div class="container" id="albums">
     <h1>Albums</h1>
     <ng-container *ngFor="let t of artist.albums">
         <app-display-album [album]="t"></app-display-album>
     </ng-container>
 </div>
+
+
+<div class="btn-group mr-3">
+        <button type="button" class="btn btn-primary">Split me</button>
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+          <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <button ngbDropdownItem>One</button>
+            <button ngbDropdownItem>Two</button>
+            <button ngbDropdownItem>Four!</button>
+          </div>
+        </div>
+      </div>

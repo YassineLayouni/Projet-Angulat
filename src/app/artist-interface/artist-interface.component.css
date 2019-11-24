@@ -31,12 +31,20 @@
     align-items: center;
 }
 #name{
-    position : absolute;
     color : white;
-    font-size: 80px;
+    font-size: 60px;
     font-family: Menu;
 }
 i{
     margin-left : 1vw;
-    font-size: 40px;
+    font-size: 30px;
+    color : white;
+    cursor : pointer;
+    margin-bottom : 1vh;
+}
+#nameContainer{
+    position : absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
