@@ -2,6 +2,7 @@
 {
     width : 100%;
     background-attachment: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
 }
 #background{
     height : 100vh;
@@ -12,4 +13,30 @@
     pointer-events: none;
     z-index: -2;
     background-repeat: no-repeat;
+}
+#albums
+{
+    margin-top : 5%;
+    color : rgb(47, 47, 47);
+    font-family: Menu;
+   
+}
+@font-face{
+    font-family: Menu;
+    src : url(/assets/MenuFont.otf);
+}
+#profile{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#name{
+    position : absolute;
+    color : white;
+    font-size: 80px;
+    font-family: Menu;
+}
+i{
+    margin-left : 1vw;
+    font-size: 40px;
 }

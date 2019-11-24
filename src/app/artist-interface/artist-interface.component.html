@@ -1,8 +1,15 @@
 <div class="container-fluid">
     <img class="img-fluid" id="background" src="../assets/Background.jpg"/> 
-    <img id="profilePic" [src]="artist.profilePhoto">
+    <div id="profile">
+        <img id="profilePic" [src]="artist.profilePhoto">
+        <p id="name">{{artist.name}}<i class="fas fa-align-justify"></i></p>
+        
+        <i class="glyphicon glyphicon-option-vertical"></i>
+    </div>
 </div>
-<div class="container">
+
+<div class="container-fluid" id="albums">
+    <h1>Albums</h1>
     <ng-container *ngFor="let t of artist.albums">
         <app-display-album [album]="t"></app-display-album>
     </ng-container>
