@@ -1,15 +1,36 @@
 <img id="background" [src]="artist.background">
-<div class="container">
-    <div id="mainContainer">
+<div class="container" style="width:70%">
+    <div id="mainContainer" style="overflow-y : auto; overflow-x: hidden;" >
         <div class="row">
-            <div class="col-6" style="transform : scale(0.8)"><app-display-album [album]="album"></app-display-album></div>
+            <div class="col-6"  style="margin-bottom: 10vh;padding-left : 6vw;display:flex">
+                <app-display-album [album]="album"></app-display-album>
+                <div class="btn-group" style="align-self: flex-end;margin-left: -1vw;">
+                    <button type="button" class="btn dropdown-toggle-split" data-toggle="dropdown">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item dropdown"  href="#">Buy Album</a>
+                        <a class="dropdown-item dropdown"  href="#">Delete Album</a>
+                    </div>
+                </div> 
+            </div>
             <div class="col-6">
+                <p>Ref : {{album.ref}}</p>
                 <p>Name : {{album.name}}</p>
                 <p>Artist : {{artist.name}}</p>
                 <p>Release Date : {{album.releaseDate|date}}</p>
                 <p>Songs : {{music.length}}</p>
-                <p>price : {{album.price}}</p>
+                <p>Price : {{album.price|currency}}</p>
             </div>
+        </div>
+        <div class="musicContainer">
+            <ul class="list-group">
+                <ng-container *ngFor="let m of music">
+                    <li class="list-group-item"><div id="cardContainer"><app-display-music [music]="m" [placement]="placement"></app-display-music></div>
+                        <span>{{m.name}}</span>
+                    </li>
+                </ng-container>
+            </ul>
         </div>
     </div>
 </div>

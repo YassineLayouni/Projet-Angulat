@@ -16,7 +16,7 @@ export class AlbumMusicInterfaceComponent implements OnInit {
   album : Album;
   music : Music[];
   artist : Artist;
-  n : number ;
+  placement:string = "album";
 
   
 

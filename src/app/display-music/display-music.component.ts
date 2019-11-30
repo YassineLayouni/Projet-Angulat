@@ -8,6 +8,7 @@ import { Music } from '../Classes/Music';
 })
 export class DisplayMusicComponent implements OnInit {
   @Input() music:Music;
+  @Input() placement;
   constructor() { }
 
   ngOnInit() {

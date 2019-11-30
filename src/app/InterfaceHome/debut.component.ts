@@ -13,6 +13,7 @@ export class DebutComponent implements OnInit {
   listArtists;
   listAlbums;
   listMusic;
+  placement:string = "home";
   constructor(private service : ListService) { }
 
   ngOnInit() {

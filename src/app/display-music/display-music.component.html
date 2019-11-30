@@ -1,7 +1,7 @@
 <div class="col" style="margin-top : 5vh" id ="Box">
-    <div class="card">
+    <div [ngClass]="{'card':true,'c1':placement=='home','c2':placement=='album'}" >
         <img id="record" class="card-img-top rounded" [src]="music.photoRecord"/>
-        <div class="card-body">
+        <div class="card-body" *ngIf="placement == 'home'">
             <p class="card-title" align="center">{{music.name}}</p>
             <a href="#" class="stretched-link"></a>
         </div>
