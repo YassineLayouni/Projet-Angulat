@@ -14,12 +14,19 @@
     z-index: -2;
     background-repeat: no-repeat;
 }
-#albums
+#albumsContainer
 {
     margin-top : 5%;
-    color : rgb(47, 47, 47);
+    color : white;
     font-family: Menu;
+    
    
+}
+#albums
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @font-face{
     font-family: Menu;
@@ -36,7 +43,7 @@
     font-family: Menu;
 }
 i{
-    margin-left : 1vw;
+    margin-left : 0vw;
     font-size: 30px;
     color : white;
     cursor : pointer;

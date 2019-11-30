@@ -4,6 +4,10 @@ import { Music } from './Music';
 export class Album{
 
   constructor(private _ref:number,private _name:string,private _refArtist:number,private _tabMusic:Music[],private _photoSrc:string,private _recordPhotoSrc:string,private _releaseDate:Date,private _liked:boolean,private _price:number,private _cart:boolean) { }
+  public get ref():number
+  {
+    return this._ref;
+  }
   public get name():string{
     return this._name;
   }
@@ -25,7 +29,7 @@ export class Album{
   public get refArtist():number{
     return this._refArtist;
   }
-  public get album():Music[]{
+  public get music():Music[]{
     return this._tabMusic;
   }
   public get recordPhotoSrc():string{

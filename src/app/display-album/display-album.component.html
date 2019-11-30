@@ -4,7 +4,7 @@
         <img id="record" [src]="album.recordPhotoSrc">
         <div class="card-body">
             <p class="card-title" align="center">{{album.name}}</p>
-            <a href="#" class="stretched-link"></a>
+            <a [routerLink]="['/Home/Artist/Album&Music/',album.ref]" class="stretched-link"></a>
         </div>
    </div>
 </div>

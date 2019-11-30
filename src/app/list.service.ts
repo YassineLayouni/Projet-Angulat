@@ -12,20 +12,20 @@ export class ListService {
   refMusic : number = 0;
   
   
-  tabMusic : Music[][] = [    [new Music(this.refMusic++,"Sisyphus",0,this.referenceAlbum(),"../assets/MyFinestWorkYetRecord.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"Shotgun",1,this.referenceAlbum(),"../assets/StayingAtTamaras.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"Crazy On You",2,this.referenceAlbum(),"../assets/DreamBoatAnnie.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"Redbone",3,this.referenceAlbum(),"../assets/AwakenMyLove.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"Stubborn Love",4,this.referenceAlbum(),"../assets/The Lumineers.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"Self Control",5,this.referenceAlbum(),"../assets/Blond.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"Should Have Known Better",6,this.referenceAlbum(),"../assets/Carrie&Lowell.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"22, A Million",7,this.referenceAlbum(),"../assets/22AMillion.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"I've Seen That Movie Too",8,this.referenceAlbum(),"../assets/YellowBrickRoad.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"Mountains",9,this.referenceAlbum(),"../assets/Interstellar.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"Youth",10,this.referenceAlbum(),"../assets/WildYouth.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"Riptide",11,this.referenceAlbum(),"../assets/DreamYourLifeAway.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"The Partisan",12,this.referenceAlbum(),"../assets/SongsFromARoom.png",new Date("2019"),false,0.5,false)],
-                              [new Music(this.refMusic++,"Asleep On The Train",13,this.referenceAlbum(),"../assets/Z-Sides.png",new Date("2019"),false,0.5,false)], 
+  tabMusic : Music[][] = [    [new Music(this.refMusic++,"Sisyphus",0,0,"../assets/MyFinestWorkYetRecord.png",new Date("2019"),false,0.5,false),],
+                              [new Music(this.refMusic++,"Shotgun",1,1,"../assets/StayingAtTamaras.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"Crazy On You",2,2,"../assets/DreamBoatAnnie.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"Redbone",3,3,"../assets/AwakenMyLove.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"Stubborn Love",4,4,"../assets/The Lumineers.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"Self Control",5,5,"../assets/Blond.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"Should Have Known Better",6,6,"../assets/Carrie&Lowell.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"22, A Million",7,7,"../assets/22AMillion.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"I've Seen That Movie Too",8,8,"../assets/YellowBrickRoad.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"Mountains",9,9,"../assets/Interstellar.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"Youth",10,10,"../assets/WildYouth.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"Riptide",11,11,"../assets/DreamYourLifeAway.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"The Partisan",12,12,"../assets/SongsFromARoom.png",new Date("2019"),false,0.5,false)],
+                              [new Music(this.refMusic++,"Asleep On The Train",13,13,"../assets/Z-Sides.png",new Date("2019"),false,0.5,false)], 
                               ];
   
   
@@ -48,20 +48,20 @@ export class ListService {
                               ];
   
   
-   tabArtists : Artist[] = [new Artist(this.refArtist,"Andrew Bird",this.rechercheListAlbum(this.refArtist++),"../assets/AndrewBird.jpg","../assets/AndrewBirdProfile.jpg",false),
-                                    new Artist(this.refArtist,"George Ezra",this.rechercheListAlbum(this.refArtist++),"../assets/GeorgeEzra.jpg","",false),
-                                    new Artist(this.refArtist,"Heart",this.rechercheListAlbum(this.refArtist++),"../assets/Heart.jpg","",false),
-                                    new Artist(this.refArtist,"Childich Gambino",this.rechercheListAlbum(this.refArtist++),"../assets/ChildichGambino.jpg","",false),
-                                    new Artist(this.refArtist,"The Lumineers",this.rechercheListAlbum(this.refArtist++),"../assets/Lumineers.jpg","",false),
-                                    new Artist(this.refArtist,"Frank Ocean",this.rechercheListAlbum(this.refArtist++),"../assets/FrankOcean.jpg","",false),
-                                    new Artist(this.refArtist,"Sufjan Stevens",this.rechercheListAlbum(this.refArtist++),"../assets/SufjanStevens.jpg","",false),
-                                    new Artist(this.refArtist,"Bon Iver",this.rechercheListAlbum(this.refArtist++),"../assets/BonIver.jpg","",false),
-                                    new Artist(this.refArtist,"Elton John",this.rechercheListAlbum(this.refArtist++),"../assets/EltonJohn.jpg","",false),
-                                    new Artist(this.refArtist,"Hans Zimmer",this.rechercheListAlbum(this.refArtist++),"../assets/HansZimmer.jpg","",false),
-                                    new Artist(this.refArtist,"Daughter",this.rechercheListAlbum(this.refArtist++),"../assets/Daughter.jpg","",false),
-                                    new Artist(this.refArtist,"Vance Joy",this.rechercheListAlbum(this.refArtist++),"../assets/VanceJoy.jpg","",false),
-                                    new Artist(this.refArtist,"Leonard Cohen",this.rechercheListAlbum(this.refArtist++),"../assets/LeonardCohen.jpg","",false),
-                                    new Artist(this.refArtist,"Tom Rosenthal",this.rechercheListAlbum(this.refArtist++),"../assets/TomRosenthal.jpg","",false),
+   tabArtists : Artist[] = [new Artist(this.refArtist,"Andrew Bird",this.rechercheListAlbum(this.refArtist++),"../assets/AndrewBird.jpg","../assets/AndrewBirdProfile.jpg","../assets/AndrewBirdBackground.jpg",false),
+                                    new Artist(this.refArtist,"George Ezra",this.rechercheListAlbum(this.refArtist++),"../assets/GeorgeEzra.jpg","../assets/GeorgeEzraProfile.jpg","../assets/GeorgeEzraBackground.jpg",false),
+                                    new Artist(this.refArtist,"Heart",this.rechercheListAlbum(this.refArtist++),"../assets/Heart.jpg","../assets/HeartProfile.jpg","../assets/HeartBackground.jpg",false),
+                                    new Artist(this.refArtist,"Childish Gambino",this.rechercheListAlbum(this.refArtist++),"../assets/ChildichGambino.jpg","../assets/ChildichGambinoProfile.jpg","../assets/ChildichGambinoBackground.jpg",false),
+                                    new Artist(this.refArtist,"The Lumineers",this.rechercheListAlbum(this.refArtist++),"../assets/Lumineers.jpg","../assets/LumineersProfile.jpg","../assets/LumineersBackground.jpg",false),
+                                    new Artist(this.refArtist,"Frank Ocean",this.rechercheListAlbum(this.refArtist++),"../assets/FrankOcean.jpg","../assets/FrankOceanProfile.jpg","../assets/FrankOceanBackground.jpg",false),
+                                    new Artist(this.refArtist,"Sufjan Stevens",this.rechercheListAlbum(this.refArtist++),"../assets/SufjanStevens.jpg","../assets/SufjanStevensProfile.jpg","../assets/SufjanStevensBackground.jpg",false),
+                                    new Artist(this.refArtist,"Bon Iver",this.rechercheListAlbum(this.refArtist++),"../assets/BonIver.jpg","../assets/BonIverProfile.jpg","../assets/BonIverBackground.jpg",false),
+                                    new Artist(this.refArtist,"Elton John",this.rechercheListAlbum(this.refArtist++),"../assets/EltonJohn.jpg","../assets/EltonJohnProfile.jpg","../assets/EltonJohnBackground.jpg",false),
+                                    new Artist(this.refArtist,"Hans Zimmer",this.rechercheListAlbum(this.refArtist++),"../assets/HansZimmer.jpg","../assets/HansZimmerProfile.jpg","../assets/HansZimmerBackground.jpg",false),
+                                    new Artist(this.refArtist,"Daughter",this.rechercheListAlbum(this.refArtist++),"../assets/Daughter.jpg","../assets/DaughterProfile.jpg","../assets/DaughterBackground.jpg",false),
+                                    new Artist(this.refArtist,"Vance Joy",this.rechercheListAlbum(this.refArtist++),"../assets/VanceJoy.jpg","../assets/VanceJoyProfile.jpg","../assets/VanceJoyBackground.jpg",false),
+                                    new Artist(this.refArtist,"Leonard Cohen",this.rechercheListAlbum(this.refArtist++),"../assets/LeonardCohen.jpg","../assets/LeonardCohenProfile.jpg","../assets/LeonardCohenBackground.jpg",false),
+                                    new Artist(this.refArtist,"Tom Rosenthal",this.rechercheListAlbum(this.refArtist++),"../assets/TomRosenthal.jpg","../assets/TomRosenthalProfile.jpg","../assets/TomRosenthalBackground.jpg",false),
                           
                                   ];
 
@@ -77,7 +77,7 @@ export class ListService {
         else
         {
           break;
-        }
+        }      
       }
     }
     return null;
@@ -101,6 +101,48 @@ export class ListService {
     return null;
   }
 
+  getAlbum(ref : number)
+  {
+    for(let i = 0 ; i < this.tabAlbums.length;i++)
+    {
+      for(let y = 0;y < this.tabAlbums[i].length;y++)
+      {
+        if(ref == this.tabAlbums[i][y].ref)
+        {
+          return this.tabAlbums[i][y]
+        }
+      }
+    }
+    return null;
+  }
+
+
+  getArtist(ref : number)
+  {
+    for(let i = 0 ; i < this.tabArtists.length;i++)
+    {
+      if(this.tabArtists[i].ref == ref)
+      {
+        return this.tabArtists[i]
+      }
+    }
+    return null;
+  }
+  getMusic(ref : number)
+  {
+    for(let i = 0 ; i < this.tabMusic.length;i++)
+    {
+      for(let y = 0;y < this.tabMusic[i].length;y++)
+      {
+        if(ref == this.tabMusic[i][y].ref)
+        {
+          return this.tabMusic[i][y]
+        }
+      }
+    }
+    return null;
+  }
+
   referenceArtist()
   {
     return this.refArtist;
@@ -109,6 +151,5 @@ export class ListService {
   {
     return this.refAlbum;
   }
-
   constructor() { }
 }

@@ -1,5 +1,5 @@
 <div class="container">
-    <img class="img-fluid" id="background" src="../assets/Background.jpg"/> 
+    <img class="img-fluid" id="background" [src]="artist.background"/> 
     <div id="profile">
         <img id="profilePic" [src]="artist.profilePhoto">
         <div id="nameContainer">
@@ -9,33 +9,19 @@
                 <i class="fas fa-ellipsis-v"></i>
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Tablet</a>
-                <a class="dropdown-item" href="#">Smartphone</a>
+                <a class="dropdown-item" href="#">Add Album</a>
+                <a class="dropdown-item" href="#">Delete Artist</a>
             </div>
-        </div>
-            
-        </div>
-        
-        <i class="glyphicon glyphicon-option-vertical"></i>
+        </div>   
+        </div>  
     </div>
 </div>
 
-<div class="container" id="albums">
-    <h1>Albums</h1>
-    <ng-container *ngFor="let t of artist.albums">
-        <app-display-album [album]="t"></app-display-album>
-    </ng-container>
+<div class="container" id="albumsContainer">
+    <h1>Albums : </h1>
+    <div id="albums">
+      <ng-container *ngFor="let t of artist.albums">
+          <app-display-album [album]="t"></app-display-album>
+      </ng-container>
+    </div>
 </div>
-
-
-<div class="btn-group mr-3">
-        <button type="button" class="btn btn-primary">Split me</button>
-        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-          <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
-          <div class="dropdown-menu" ngbDropdownMenu>
-            <button ngbDropdownItem>One</button>
-            <button ngbDropdownItem>Two</button>
-            <button ngbDropdownItem>Four!</button>
-          </div>
-        </div>
-      </div>

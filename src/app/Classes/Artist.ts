@@ -1,7 +1,7 @@
 import { Album } from './Album';
 export class Artist{
 
-  constructor(private _ref : number,private _name:string,private _tabAlbums:Album[],private _photoSrc:string,private _profilePhoto:string,private _liked:boolean) { }
+  constructor(private _ref : number,private _name:string,private _tabAlbums:Album[],private _photoSrc:string,private _profilePhoto:string,private _background:string,private _liked:boolean) { }
   public get ref():number{
     return this._ref;
   }
@@ -19,6 +19,9 @@ export class Artist{
   }
   public get liked(){
     return this._liked;
+  }
+  public get background(){
+    return this._background;
   }
   public set liked(value : boolean){
     this._liked = value;

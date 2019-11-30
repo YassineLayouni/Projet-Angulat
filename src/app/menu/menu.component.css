@@ -43,6 +43,7 @@ hr{
     transition : width 0.5s ease;
     display : flex;
     z-index: +5;
+    overflow: hidden;
 }
 
 .interface{
@@ -77,10 +78,8 @@ hr{
 }
 #logo{
     z-index : +6;
-    position : fixed;
     transform: scale(0.6);
-    top : 1.4%;
-    left : 2%;
+    margin-left: 10%;
 }
 #Menu
 {
@@ -88,9 +87,7 @@ hr{
     justify-content: center;
 }
 @media screen and (max-width : 520px){
-    #logo{
-        visibility: hidden;
-    }
+   
     #menuBtn
     {
        left : 40%;
@@ -103,4 +100,12 @@ hr{
 .active{
     font-size: 280%;
     text-decoration: line-through;
+}
+#logoContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width : 100%;
+    height: 150px;
+    position: absolute;
 }

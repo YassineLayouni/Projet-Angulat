@@ -1,0 +1,15 @@
+<img id="background" [src]="artist.background">
+<div class="container">
+    <div id="mainContainer">
+        <div class="row">
+            <div class="col-6" style="transform : scale(0.8)"><app-display-album [album]="album"></app-display-album></div>
+            <div class="col-6">
+                <p>Name : {{album.name}}</p>
+                <p>Artist : {{artist.name}}</p>
+                <p>Release Date : {{album.releaseDate|date}}</p>
+                <p>Songs : {{music.length}}</p>
+                <p>price : {{album.price}}</p>
+            </div>
+        </div>
+    </div>
+</div>

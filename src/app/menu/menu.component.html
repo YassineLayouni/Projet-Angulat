@@ -1,6 +1,4 @@
-
- <a class="navbar-brand" href="#"><img class="img-fluid" id="logo" src="../assets/Logo.png"></a>
- <div class="container-fluid">
+<div class="container-fluid">
   <div [ngStyle]="{'border-color':btnChangeColor}" id="menuBtn" (mouseover)="expandLines()" (mouseout)="shrinkLines()" (click)="buttonclick = !buttonclick;checkMenuBtn()">
     <ng-container *ngIf="!buttonclick">
         <hr [ngStyle]="{width : widthLines}"/>
@@ -14,6 +12,9 @@
  </div>
 <div class="container-fluid">
 <div  id="menu" [ngStyle]="{width : menuWidth,'transition-delay':menuReturnDelay,'pointer-events':menuEvents}">
+    <div id="logoContainer">
+        <a class="navbar-brand"><img class="img-fluid" id="logo" src="../assets/Logo.png"></a>
+    </div>
     <div id="innerMenu">
     <ul class="nav flex-column">
         <li class="nav-item">

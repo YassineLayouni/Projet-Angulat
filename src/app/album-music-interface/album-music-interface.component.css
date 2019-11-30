@@ -1,0 +1,32 @@
+#background{
+    height : 100vh;
+    width : 100vw;
+    position: fixed;
+    top : 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -2;
+    background-repeat: no-repeat;
+}
+#mainContainer
+{
+    height : 95vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(20px);
+    margin-top : 2.5vh;
+    margin-bottom : 2.5vh;
+    border-radius: 20px;
+    position : relative;
+}
+.row
+{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-weight : 200;
+    font-size: 25px;
+    color : rgb(167, 167, 167);
+    text-shadow:2px 2px black ;
+}
