@@ -6,7 +6,7 @@
         <hr [ngStyle]="{width : widthLines}"/>
     </ng-container>
     <ng-container *ngIf="buttonclick">
-        <h1 id="closeBtn" [ngStyle]="{transform : closeScale, color : btnChangeColor}">X</h1>
+        <h1 id="closeBtn" [ngStyle]="{'font-size' : closeSize, color : btnChangeColor}">X</h1>
     </ng-container> 
   </div>
  </div>

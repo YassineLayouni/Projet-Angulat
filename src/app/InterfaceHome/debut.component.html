@@ -20,26 +20,22 @@
             <app-display-artist [artist]="t" style="float :left"></app-display-artist>
         </ng-container>
         <div class="card" style="width : 17vw;height : 23vw">
-              <a href="#"><img src="../assets/Add.png" width="100vw"></a>
+              <a [routerLink]="'/Home/AddArtist'"><img src="../assets/Add.png" width="100vw"></a>
         </div>
     </div>
     
     <div id="Albums" style="margin-top : 25vh;">
       <ng-container *ngFor="let t of listAlbums;let indice=index">
-              <div><app-display-album [album]="t[0]" style="float :left"></app-display-album></div>  
+              <div *ngIf="t.length>0"><app-display-album [album]="t[0]" style="float :left"></app-display-album></div>  
       </ng-container>
-      <div class="card" style="width : 17vw;height : 17vw" >
-            <a href="#" ><img src="../assets/Add.png" style="width : 100px;" ></a>
-      </div>
+      <div class="card" style="width : 17vw;height : 17vw" ></div>
   </div>
     
   <div id="Music" style="margin-top : 25vh;">
     <ng-container *ngFor="let t of listMusic;let indice=index">
-            <app-display-music [music]="t[0]" [placement]="placement" style="float :left"></app-display-music>
+            <div *ngIf="t.length>0"><app-display-music [music]="t[0]" [placement]="placement" style="float :left"></app-display-music></div>
     </ng-container>
-    <div class="card" style="width : 17vw;height : 17vw">
-          <a href="#"><img src="../assets/Add.png" width="100vw"></a>
-    </div>
+    <div class="card" style="width : 17vw;height : 17vw"></div>
 
   </div>
   

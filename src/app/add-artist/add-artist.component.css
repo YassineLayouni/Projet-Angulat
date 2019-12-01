@@ -1,0 +1,134 @@
+#mainContainer{
+    display : flex;
+    justify-content: space-around;
+    background: linear-gradient(#1a1a1a, #2c2c2c);
+    width : 100vw;
+    height : 100vh;
+    overflow: hidden;
+}
+#rollerCoster
+{
+    margin-top : 5vh;
+    margin-bottom: 5vh;
+    width : 30vw;
+    height : 89vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+img{
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    min-width : 30vw;
+    min-height : 89vh;
+    max-height: 89vh;
+    max-width: 30vw;
+}
+#adding{
+    margin-top : 5vh;
+    margin-bottom: 5vh;
+    width : 50vw;
+    height : 90vh;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#title{
+    font-family:Title ;
+    color : white;
+    font-size: 5rem;
+}
+@font-face{
+    font-family: Title;
+    src : url(/assets/LaLaLandFont.ttf);
+}
+label{
+    color : white;
+    font-size: large;
+    font-weight: 200;
+}
+form{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input{
+    width : 35vw;
+}
+.photo{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.photoInput1
+{
+    display: none;
+}
+.photoInputContainer
+{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.photoContainer
+{
+    width : 8vw;
+    height : 5vh;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    border-radius : 10%;
+    color : white;
+    font-size: 0.75rem;
+}
+#photoName
+{
+    background-color: rgba(0, 0, 0, 0);
+    border : 0px;
+    border-bottom: 1px solid rgb(177, 177, 177);
+    width : 25vw;
+    color : rgb(129, 129, 129);
+    text-shadow: 1px 1px black;
+    margin-left : 1vw;
+}
+
+#submitBtns
+{
+    margin-bottom : 5vh;
+    display : flex;
+}
+#submit
+{
+    width : 8vw;
+    height : 5vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    border-radius : 10%;
+    color : black;
+    font-size: 0.75rem;
+    margin-right: 1vw;
+    border : 0px;
+}
+#reset
+{
+    width : 8vw;
+    height : 5vh;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    border-radius : 10%;
+    color : white;
+    font-size: 0.75rem;
+    margin-right: 1vw;
+    border : 0px;
+}

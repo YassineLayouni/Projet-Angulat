@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { DebutComponent } from './InterfaceHome/debut.component';
@@ -18,6 +18,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ArtistInterfaceComponent } from './artist-interface/artist-interface.component';
 import { AlbumMusicInterfaceComponent } from './album-music-interface/album-music-interface.component';
+import { AddArtistComponent } from './add-artist/add-artist.component';
+import { AddAlbumComponent } from './add-album/add-album.component';
 
 @NgModule({
   declarations: [
@@ -34,10 +36,13 @@ import { AlbumMusicInterfaceComponent } from './album-music-interface/album-musi
     DashboardComponent,
     ArtistInterfaceComponent,
     AlbumMusicInterfaceComponent,
+    AddArtistComponent,
+    AddAlbumComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

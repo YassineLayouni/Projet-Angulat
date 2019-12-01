@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Music } from '../Classes/Music';
+import { ListService } from '../list.service';
 
 @Component({
   selector: 'app-display-music',
@@ -9,7 +10,7 @@ import { Music } from '../Classes/Music';
 export class DisplayMusicComponent implements OnInit {
   @Input() music:Music;
   @Input() placement;
-  constructor() { }
+  constructor(private service:ListService) { }
 
   ngOnInit() {
   }

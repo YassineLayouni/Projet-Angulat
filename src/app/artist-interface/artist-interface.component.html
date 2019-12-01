@@ -10,7 +10,7 @@
                 <i class="fas fa-ellipsis-v"></i>
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Add Album</a>
+                <a class="dropdown-item" [routerLink]="['/Home/AddAlbum',artist.ref]">Add Album</a>
                 <a class="dropdown-item" href="#">Delete Artist</a>
             </div>
         </div>   
@@ -20,10 +20,12 @@
 
 <div class="container" id="albumsContainer" style="width:70%">
     <h1>Albums : </h1>
-    <div id="albums">
-      <ng-container *ngFor="let t of artist.albums">
-          <app-display-album [album]="t"></app-display-album>
-      </ng-container>
+    <div id="albums" style="width : 100%;display:flex;flex-wrap: wrap;">
+      <div *ngIf="artist.albums.length>0">
+          <ng-container *ngFor="let t of artist.albums">
+              <app-display-album [album]="t"></app-display-album>
+          </ng-container>
+      </div>
     </div>
 </div>
 </div>

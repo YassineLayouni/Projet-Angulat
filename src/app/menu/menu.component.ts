@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  widthLines : string = "40%";
-  closeScale : string = "scale(1)";
+  widthLines : string = "1vw";
+  closeSize : string = "1.2rem";
   buttonclick : boolean = false;
   menuWidth : string = "0";
   menuEvents : string = "none";
@@ -20,19 +20,19 @@ export class MenuComponent implements OnInit {
   acceuil : string = "HOME";
   expandLines()
   {
-    this.widthLines = "80%";
-    this.closeScale = "scale(1.5)";
+    this.widthLines = "2vw";
+    this.closeSize = "1.5rem";
   }
   shrinkLines()
   {
     this.widthLines = "40%";
-    this.closeScale = "scale(1)";
+    this.closeSize = "1.5rem";
   }
 
   checkMenuBtn(){
     if(this.buttonclick){
       this.menuReturnDelay = "0s";
-      this.menuWidth = "520px";
+      this.menuWidth = "30vw";
       this.btnChangeColor = "#FCE77D";
       this.interfaceOpacity = "1";
       this.menuEvents = "all";

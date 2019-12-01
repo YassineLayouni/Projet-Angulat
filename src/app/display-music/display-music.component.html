@@ -3,7 +3,7 @@
         <img id="record" class="card-img-top rounded" [src]="music.photoRecord"/>
         <div class="card-body" *ngIf="placement == 'home'">
             <p class="card-title" align="center">{{music.name}}</p>
-            <a href="#" class="stretched-link"></a>
+            <a [routerLink]="['/Home/Artist/Album&Music/',music.refAlbum]" class="stretched-link"></a>
         </div>
    </div>
 </div>

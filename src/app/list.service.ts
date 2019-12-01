@@ -35,14 +35,14 @@ export class ListService {
                               [new Album(this.refAlbum,"Awaken, My Love",3,this.rechercheListMusic(this.refAlbum++),"../assets/AwakenMyLove.jpg","../assets/AwakenMyLove.png",new Date("2019"),false,50,false)],
                               [new Album(this.refAlbum,"The Lumineers",4,this.rechercheListMusic(this.refAlbum++),"../assets/The Lumineers.jpg","../assets/The Lumineers.png",new Date("2019"),false,50,false)],
                               [new Album(this.refAlbum,"Blond",5,this.rechercheListMusic(this.refAlbum++),"../assets/Blond.jpg","../assets/Blond.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Carrie&Lowell",6,this.rechercheListMusic(this.refAlbum++),"../assets/Carrie&Lowell.jpg","../assets/Carrie&Lowell.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum,"Carrie&Lowell",6,this.rechercheListMusic(this.refAlbum++),"../assets/Carrie&Lowell.jpg","../assets/Carrie&Lowell.png",new Date("2019"),false,50,false),],
                               [new Album(this.refAlbum,"22, A Million ",7,this.rechercheListMusic(this.refAlbum++),"../assets/22AMillion.jpg","../assets/22AMillion.png",new Date("2019"),false,50,false)],
                               [new Album(this.refAlbum,"Yellow Brick Road",8,this.rechercheListMusic(this.refAlbum++),"../assets/YellowBrickRoad.jpg","../assets/YellowBrickRoad.png",new Date("2019"),false,50,false)],
                               [new Album(this.refAlbum,"Interstellar",9,this.rechercheListMusic(this.refAlbum++),"../assets/Interstellar.jpg","../assets/Interstellar.png",new Date("2019"),false,50,false)],
                               [new Album(this.refAlbum,"Wild Youth",10,this.rechercheListMusic(this.refAlbum++),"../assets/WildYouth.jpg","../assets/WildYouth.png",new Date("2019"),false,50,false),],
                               [new Album(this.refAlbum,"Dream Your Life Away",11,this.rechercheListMusic(this.refAlbum++),"../assets/DreamYourLifeAway.jpg","../assets/DreamYourLifeAway.png",new Date("2019"),false,50,false)],
                               [new Album(this.refAlbum,"Songs From A Room",12,this.rechercheListMusic(this.refAlbum++),"../assets/SongsFromARoom.jpg","../assets/SongsFromARoom.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Z-Sides",13,this.rechercheListMusic(this.refAlbum++),"../assets/Z-Sides.jpg","../assets/Z-Sides.png",new Date("2019"),false,50,false)],
+                              [new Album(this.refAlbum,"Z-Sides",13,this.rechercheListMusic(this.refAlbum++),"../assets/Z-Sides.jpg","../assets/Z-Sides.png",new Date("01/05/2019"),false,50,false)],
                               
                                     
                               ];
@@ -150,6 +150,53 @@ export class ListService {
   referenceAlbum()
   {
     return this.refAlbum;
+  }
+
+  addArtist(ref:number,name:string,photo : string,profile : string,background : string){
+    let albums : Album[] = [];
+    if(this.getArtist(ref)==null)
+    {
+      this.tabArtists.push(new Artist(ref,name,albums,photo,profile,background,false));
+      this.tabAlbums.push(albums);
+      return true;
+    }
+    return false;
+  }
+
+  deleteArtist(artist : Artist)
+  {
+    this.tabArtists.splice(this.tabArtists.indexOf(artist),1);
+  }
+
+  
+  addAlbum(artist :Artist,ref:number,name : string,photo : string,recordPhoto : string,releaseDate : Date,price : number)
+  {
+    if(this.getAlbum(ref)!=null)
+    {
+      artist.albums.push(new Album(ref,name,artist.ref,null,photo,recordPhoto,releaseDate,false,price,false));
+      return true;
+    }
+    return false;
+  }
+  
+  deleteAlbum(artist : Artist,album : Album)
+  {
+    artist.albums.splice(artist.albums.indexOf(album),1);
+  }
+  
+  addMusic(artist : Artist,album : Album,ref:number,name : string,recordPhoto:string,releaseDate:Date,price:number)
+  {
+    if(this.getMusic(ref)!=null)
+    {
+      album.music.push(new Music(ref,name,artist.ref,album.ref,recordPhoto,releaseDate,false,price,false));
+      return true;
+    }
+    return false;
+  }
+  
+  deleteMusic(album:Album,music : Music)
+  {
+    album.music.splice(album.music.indexOf(music),1);
   }
   constructor() { }
 }
