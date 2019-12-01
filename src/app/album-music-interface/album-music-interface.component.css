@@ -17,7 +17,14 @@
     border-radius: 20px;
     position : relative;
     background-color: rgba(0,0,0,0.5);
+    background-attachment: fixed;
 }
+@supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+    #mainContainer{
+        -webkit-backdrop-filter: blur(100px);
+        backdrop-filter: blur(20px);
+    }
+  }
 .row
 {
     display : flex;
@@ -26,7 +33,6 @@
 }
 p,span{
     font-weight : 200;
-    font-size: 1rem;
     color : rgb(167, 167, 167);
     text-shadow:1px 1px black ;
 }
