@@ -57,7 +57,7 @@
                <label for="photoInput">
                    <div class="photoInputContainer">
                        <div class="photoContainer">CHOOSE FILE</div>
-                       <div><input type="text" id="photoName" placeholder="Input Photo" name="photoName" [(ngModel)]="photo" disabled></div>
+                       <div><input type="text" class="photoName" placeholder="Input Photo" name="photoName" [(ngModel)]="photo" disabled></div>
                    </div>
                 </label>
                 <input type="file" class="photoInput1" id="photoInput" name="photo" (input)="onInputPhoto($event)"/>
@@ -69,7 +69,7 @@
                <label for="profilePhotoInput">
                    <div class="photoInputContainer">
                        <div class="photoContainer">CHOOSE FILE</div>
-                       <div><input type="text" id="photoName" placeholder="Input Profile Photo" name="profilePhotoName" [(ngModel)]="profilePhoto" disabled></div>
+                       <div><input type="text" class="photoName" placeholder="Input Profile Photo" name="profilePhotoName" [(ngModel)]="profilePhoto" disabled></div>
                    </div>
                 </label>
                 <input type="file" class="photoInput1" id="profilePhotoInput" name="profilePhoto" (input)="onInputProfilePhoto($event)"/>
@@ -81,7 +81,7 @@
                <label for="backgroundPhotoInput">
                    <div class="photoInputContainer">
                        <div class="photoContainer">CHOOSE FILE</div>
-                       <div><input type="text" id="photoName" placeholder="Input Background Photo" name="backgroundPhoto    Name" [(ngModel)]="backgroundPhoto" disabled></div>
+                       <div><input type="text" class="photoName" placeholder="Input Background Photo" name="backgroundPhoto    Name" [(ngModel)]="backgroundPhoto" disabled></div>
                    </div>
                 </label>
                 <input type="file" class="photoInput1" id="backgroundPhotoInput" name="backgroundPhoto" (input)="onInputBackgroundPhoto($event)"/>

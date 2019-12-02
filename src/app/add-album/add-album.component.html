@@ -1,13 +1,48 @@
+<img id="wallpaper" src="../assets/AddAlbum2.jpg">
 <div id="mainContainer">
     <div id="secondaryContainer">
         <div id="formContainer">
             <div id="title">Add Album</div>
             <form #f="ngForm" (ngSubmit)="onAddAlbum(f)">
-                <label for="ref">Identification</label>
-                <input class="form-control" type="number" id="ref" name="ref" required placeholder="Ex : 591357" ngModel>
+                <input class="form-control" type="number" id="ref" name="ref" required placeholder="Identification" ngModel>
                 <br/>
-                <label for="name">Name</label>
-                <input class="form-control" type="text" id="name" name="name" required placeholder="Ex : Long Way Out Of Eden" ngModel>
+                <input class="form-control" type="text" id="name" name="name" required placeholder="Name" ngModel>
+                <br/>
+                <input class="form-control" type="date" id="releaseDate" name="releaseDate" required ngModel>
+                <br/>
+                <div id="price">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customPriceSwitch" [(ngModel)]="check"  name="customPriceCheck" ngModel>
+                        <label class="custom-control-label" for="customPriceSwitch" ></label>
+                    </div>
+                    <input type="number" class="form-control" id="priceInput" name="priceInput" [disabled]="!check" placeholder="Custom Price" ngModel>
+                </div>
+                <br/>
+            <div id="photo">
+               <label for="photoInput">
+                   <div class="photoInputContainer">
+                       <div class="photoContainer">CHOOSE FILE</div>
+                       <div><input type="text" class="photoName" placeholder="Input Photo" name="photoName" [(ngModel)]="photo" disabled></div>
+                   </div>
+                </label>
+                <input type="file" class="photoInput1" id="photoInput" name="photo" (input)="onInputPhoto($event)"/>
+            </div>
+            <br/>
+            <div id="photo">
+               <label for="recordPhotoInput">
+                   <div class="photoInputContainer">
+                       <div class="photoContainer">CHOOSE FILE</div>
+                       <div><input type="text" class="photoName" placeholder="Input Record Photo" name="recordPhotoName" [(ngModel)]="recordPhoto" disabled></div>
+                   </div>
+                </label>
+                <input type="file" class="photoInput1" id="recordPhotoInput" name="recordPhoto" (input)="onInputRecordPhoto($event)"/>
+            </div>
+            <br/>
+            
+            <div id="submitBtns">
+                <button type="submit" [disabled]="f.invalid" id="submit">Add Album</button>
+                <input type="reset" id="reset" value="Reset">
+            </div>
             </form>
         </div>
         <div id="logosContainer">

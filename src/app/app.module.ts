@@ -20,6 +20,7 @@ import { ArtistInterfaceComponent } from './artist-interface/artist-interface.co
 import { AlbumMusicInterfaceComponent } from './album-music-interface/album-music-interface.component';
 import { AddArtistComponent } from './add-artist/add-artist.component';
 import { AddAlbumComponent } from './add-album/add-album.component';
+import { AddMusicComponent } from './add-music/add-music.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AddAlbumComponent } from './add-album/add-album.component';
     AlbumMusicInterfaceComponent,
     AddArtistComponent,
     AddAlbumComponent,
+    AddMusicComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,61 +1,61 @@
-#mainContainer{
-    display : flex;
-    justify-content: space-around;
-    background: linear-gradient(#1a1a1a, #2c2c2c);
+img{
     width : 100vw;
     height : 100vh;
-    overflow: hidden;
+    position : absolute;
+    z-index: -2;
 }
-#rollerCoster
-{
-    margin-top : 5vh;
-    margin-bottom: 5vh;
-    width : 30vw;
-    height : 89vh;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
-    border-top-right-radius: 5%;
-    border-bottom-left-radius: 5%;
-}
-img{
-    border-top-right-radius: 5%;
-    border-bottom-left-radius: 5%;
-    min-width : 30vw;
-    min-height : 89vh;
-    max-height: 89vh;
-    max-width: 30vw;
-}
-#adding{
-    margin-top : 5vh;
-    margin-bottom: 5vh;
-    width : 50vw;
-    height : 90vh;
+#mainContainer{
+    width : 100vw;
+    right : 0;
     display : flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
-#title{
-    font-family:Title ;
-    color : white;
-    font-size: 5rem;
+#formContainer{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    width : 40vw;
+    height:90vh;
+    align-self: flex-end;
+    margin-right: 5vw;
+    backdrop-filter: blur(20px);
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 @font-face{
-    font-family: Title;
-    src : url(/assets/LaLaLandFont.ttf);
+    font-family: Austin;
+    src : url(/assets/AustinFont.ttf);
 }
-label{
+#title
+{
+    font-family: Austin;
     color : white;
-    font-size: large;
-    font-weight: 200;
-}
-form{
-    display : flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-shadow: 1px 1px black;
+    font-size: 5rem;
 }
 input{
-    width : 35vw;
+     width : 20vw;
+     border : 0px;
+     background-color: rgba(0,0,0,0);
+     border-bottom : 2px solid white;
+     color : white;
+     border-radius: 0;
+}
+input:focus
+{
+    background-color: rgba(0,0,0,0);
+    color: white;
+    
+}
+::placeholder{
+    color: rgb(219, 219, 219);
+    opacity: 1;
+}
+#price{
+    display : flex;
 }
 .photo{
     display : flex;
@@ -90,23 +90,22 @@ input{
 {
     background-color: rgba(0, 0, 0, 0);
     border : 0px;
-    border-bottom: 1px solid rgb(177, 177, 177);
-    width : 25vw;
-    color : rgb(129, 129, 129);
-    text-shadow: 1px 1px black;
+    border-bottom: 2px solid rgb(177, 177, 177);
+    width : 11vw;
     margin-left : 1vw;
 }
-
 #submitBtns
 {
     margin-bottom : 5vh;
     display : flex;
+    justify-content: center;
+    align-items: center;
 }
 #submit
 {
     width : 8vw;
     height : 5vh;
-    background-color: #ffffff;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,6 +115,7 @@ input{
     font-size: 0.75rem;
     margin-right: 1vw;
     border : 0px;
+    cursor: pointer;
 }
 #reset
 {
