@@ -1,1 +1,17 @@
-<p>add-album works!</p>
+<div id="mainContainer">
+    <div id="secondaryContainer">
+        <div id="formContainer">
+            <div id="title">Add Album</div>
+            <form #f="ngForm" (ngSubmit)="onAddAlbum(f)">
+                <label for="ref">Identification</label>
+                <input class="form-control" type="number" id="ref" name="ref" required placeholder="Ex : 591357" ngModel>
+                <br/>
+                <label for="name">Name</label>
+                <input class="form-control" type="text" id="name" name="name" required placeholder="Ex : Long Way Out Of Eden" ngModel>
+            </form>
+        </div>
+        <div id="logosContainer">
+            <div id="img1"><img src="../assets/AddAlbum1.png"></div>
+        </div>
+    </div>
+</div>
