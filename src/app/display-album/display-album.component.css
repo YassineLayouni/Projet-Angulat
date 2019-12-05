@@ -6,7 +6,7 @@ img {
 }
 .card{
     width:17vw;
-    height : 17vw;
+    height : auto;
     background-color : rgb(0,0,0,0);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color : rgb(219, 208, 208);
@@ -34,8 +34,4 @@ img {
 .card:hover #record
 {
     transform: translate(0px,-25%);
-}
-.card-title
-{
-    margin-top : -2vh;
 }

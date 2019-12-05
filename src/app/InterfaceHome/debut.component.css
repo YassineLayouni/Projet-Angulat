@@ -39,3 +39,28 @@ a:hover{
         visibility: hidden;
     }
 }
+#Artists
+{
+    width : 98vw;
+    height : auto;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#Albums{
+    width : 98vw;
+    height : auto;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;   
+}
+#Music{
+    width : 98vw;
+    height : auto;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;   
+}
