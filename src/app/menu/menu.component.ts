@@ -21,18 +21,18 @@ export class MenuComponent implements OnInit {
   expandLines()
   {
     this.widthLines = "2vw";
-    this.closeSize = "1.5rem";
+    this.closeSize = "2rem";
   }
   shrinkLines()
   {
-    this.widthLines = "40%";
-    this.closeSize = "1.5rem";
+    this.widthLines = "1vw";
+    this.closeSize = "1.2rem";
   }
 
   checkMenuBtn(){
     if(this.buttonclick){
       this.menuReturnDelay = "0s";
-      this.menuWidth = "30vw";
+      this.menuWidth = "25vw";
       this.btnChangeColor = "#FCE77D";
       this.interfaceOpacity = "1";
       this.menuEvents = "all";
