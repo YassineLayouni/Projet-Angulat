@@ -1,0 +1,8 @@
+<img id="wallpaper" src="../assets/searchWallpaper.png">
+<div id="mainContainer">
+    <h1>Search : </h1>
+    <div id="searchContainer">
+        <input type="text" class="form-control" id="searchBar" name="searchBar" [(ngModel)]="search">
+        <a [routerLink]="'/Home'" (click)="onSearch()"><i class="fab fa-sistrix fa-5x" id="search"></i></a>
+    </div>
+</div>

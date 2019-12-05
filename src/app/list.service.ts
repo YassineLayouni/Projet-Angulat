@@ -10,6 +10,7 @@ export class ListService {
   refArtist : number = 0;
   refAlbum : number = 0;
   refMusic : number = 0;
+  search : string ="";
   
   
   tabMusic : Music[][] = [    [new Music(this.refMusic++,"Sisyphus",0,0,"../assets/MyFinestWorkYetRecord.png","4:07",false,0.5,false),new Music(this.refMusic++,"Bloodless",0,0,"../assets/MyFinestWorkYetRecord.png","6:29",false,0.5,false),new Music(this.refMusic++,"Olympians",0,0,"../assets/MyFinestWorkYetRecord.png","3:58",false,0.5,false),new Music(this.refMusic++,"Manifest",0,0,"../assets/MyFinestWorkYetRecord.png","5:17",false,0.5,false),new Music(this.refMusic++,"Cracking Codes",0,0,"../assets/MyFinestWorkYetRecord.png","3:12",false,0.5,false)],
@@ -246,6 +247,49 @@ export class ListService {
       this.getMusic(ref).duration = duration;
       this.getMusic(ref).price = price;
       return true;
+    }
+    return false;
+  }
+  searchAllArtists()
+  {
+    let regExp = new RegExp(this.search,"i");
+    for(let a of this.tabArtists)
+    {
+      if(regExp.test(a.name))
+      {
+        return true;
+      }
+    }
+    return false;
+  }
+  searchAllAlbums()
+  {
+    let regExp = new RegExp(this.search,"i");
+    for(let t of this.tabAlbums)
+    {
+      for(let a of t)
+      {
+        if(regExp.test(a.name))
+        {
+        return true;
+        }
+      }  
+    }
+    return false;
+  }
+
+  searchAllMusic()
+  {
+    let regExp = new RegExp(this.search,"i");
+    for(let t of this.tabMusic)
+    {
+      for(let a of t)
+      {
+        if(regExp.test(a.name))
+        {
+        return true;
+        }
+      }  
     }
     return false;
   }

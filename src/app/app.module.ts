@@ -25,6 +25,8 @@ import { UpdateArtistComponent } from './update-artist/update-artist.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { UpdateAlbumComponent } from './update-album/update-album.component';
 import { UpdateMusicComponent } from './update-music/update-music.component';
+import { SearchComponent } from './search/search.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 @NgModule({
@@ -48,6 +50,8 @@ import { UpdateMusicComponent } from './update-music/update-music.component';
     UpdateArtistComponent,
     UpdateAlbumComponent,
     UpdateMusicComponent,
+    SearchComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,

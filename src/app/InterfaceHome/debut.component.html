@@ -1,4 +1,6 @@
 <div class="container-fluid">
+    <img class="img-fluid" id="background" src="../assets/Background1.jpg"/>
+  
   <nav class="navbar navbar-expand-sm  fixed-top" style="position:-webkit-sticky;z-index: +4;">
     <ul id="HomeNav" class="navbar-nav" style="margin-left:36vw;margin-top : 0">
             <li class="nav-item">
@@ -13,30 +15,58 @@
     </ul>
   </nav>
     
-    <img class="img-fluid" id="background" src="../assets/Background1.jpg"/>
 
+    
     <div id="Artists" style="margin-top : 25vh;">
         <ng-container *ngFor="let t of listArtists;let indice=index">
-            <app-display-artist [artist]="t" style="float :left"></app-display-artist>
+            <ng-container *ngIf="checkSearchEmpty() || searchName(t.name)">
+                <app-display-artist [artist]="t" style="float :left"></app-display-artist>
+            </ng-container>
         </ng-container>
-        <div class="card" style="width : 17vw;height : 23vw">
+        <div *ngIf="checkSearchEmpty()" class="card" style="width : 17vw;height : 23vw">
               <a [routerLink]="'/Home/AddArtist'"><img src="../assets/Add.png" width="100vw"></a>
         </div>
+        <p class="notFound" *ngIf="!this.service.searchAllArtists()">No macth found in artists for "{{this.service.search}}" </p>
     </div>
     
-    <div id="Albums" style="margin-top : 25vh;">
+    
+    
+  <div id="Albums" style="margin-top : 25vh;">
       <ng-container *ngFor="let t of listAlbums;let indice=index">
-              <div *ngIf="t.length>0"><app-display-album [album]="t[0]" style="float :left"></app-display-album></div>  
+        <ng-container *ngFor ="let a of listAlbums[indice];let y=index">
+          <ng-container *ngIf="checkSearchEmpty() || searchName(a.name)">
+              <div *ngIf="t.length>0"><app-display-album [album]="a" style="float :left"></app-display-album></div>
+          </ng-container>
+        </ng-container>
       </ng-container>
-      <div class="card" style="width : 17vw;height : 17vw" ></div>
+      <div *ngIf="checkSearchEmpty()" class="card" style="width : 17vw;height : 17vw" ></div>
+      <p class="notFound" *ngIf="!this.service.searchAllAlbums()">No macth found in albums for "{{this.service.search}}" </p>
   </div>
     
+  
+  
   <div id="Music" style="margin-top : 25vh;">
-    <ng-container *ngFor="let t of listMusic;let indice=index">
-            <div *ngIf="t.length>0"><app-display-music [music]="t[0]" [placement]="placement" style="float :left"></app-display-music></div>
+      
+    <ng-container *ngIf="!checkSearchEmpty()">
+     <ng-container *ngFor="let t of listMusic;let indice=index">
+      <ng-container *ngFor="let m of listMusic[indice];let y = index">
+          <ng-container *ngIf="checkSearchEmpty() || searchName(m.name)">
+            <div *ngIf="t.length>0"><app-display-music [music]="m" [placement]="placement" style="float :left"></app-display-music></div>
+      </ng-container>
+      </ng-container>
     </ng-container>
-    <div class="card" style="width : 17vw;height : 17vw"></div>
+   </ng-container>
+   
+   <ng-container *ngIf="checkSearchEmpty()">
+      <ng-container *ngFor="let t of listMusic;let indice=index">
+           <ng-container *ngIf="checkSearchEmpty() || searchName(m.name)">
+             <div *ngIf="t.length>0"><app-display-music [music]="t[0]" [placement]="placement" style="float :left"></app-display-music></div>
+       </ng-container>
+     </ng-container>
+    </ng-container>
 
+   <div *ngIf="checkSearchEmpty()" class="card" style="width : 17vw;height : 17vw"></div>
+   <p class="notFound" *ngIf="!this.service.searchAllMusic()">No macth found in Music for "{{this.service.search}}" </p>
   </div>
   
 </div>

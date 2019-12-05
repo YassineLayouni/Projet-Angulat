@@ -14,6 +14,31 @@ export class DebutComponent implements OnInit {
   listAlbums;
   listMusic;
   placement:string = "home";
+  
+  checkSearchEmpty()
+  {
+    if(this.service.search=="")
+    {
+      return true;
+    }
+    return false;
+  }
+
+  searchName(name:string)
+  {
+    let regExp = new RegExp(this.service.search,"i");
+    if(regExp.test(name))
+    {
+      return true
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+
+
   constructor(private service : ListService) { }
 
   ngOnInit() {

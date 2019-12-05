@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListService } from '../list.service';
 
 @Component({
   selector: 'app-menu',
@@ -14,7 +15,7 @@ export class MenuComponent implements OnInit {
   btnChangeColor : string = "#10316b";
   interfaceOpacity : string = "0";
   menuReturnDelay : string ="0";
-  loginOrSignUp : string = "LOG IN/SIGN UP";
+  SignOut : string = "Sign Out";
   liked : string = "LIKED";
   chercher :string = "SEARCH";
   acceuil : string = "HOME";
@@ -44,9 +45,13 @@ export class MenuComponent implements OnInit {
       this.interfaceOpacity = "0";
       this.menuEvents = "none";
     }
-
   }
-  constructor() { }
+
+  onClearSearch()
+  {
+    this.service.search = "";
+  }
+  constructor(private service:ListService) { }
 
   ngOnInit() {
   }

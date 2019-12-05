@@ -1,0 +1,87 @@
+video{
+   
+    position: fixed;
+    min-width : 100vw !important;
+    min-height: 100vh !important;
+    z-index: -2;
+}
+#mainContainer
+{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    width : 100vw;
+    height : 100vh;
+    flex-direction: column;
+}
+form{
+    margin-top : 5vh; 
+    display : flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; 
+}
+#formContainer
+{
+    width : 40vw;
+    height : 90vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(100px);
+    border-top : 10px solid rgb(240, 158, 66);
+    border-radius: 1%; 
+    margin-right : 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.customInput{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    border : 0px;
+    border-bottom : 2px solid rgb(240, 158, 66) ;
+    border-radius: 0;
+    width : 25vw;
+}
+.customInput::placeholder
+{
+    
+    color : rgb(224, 224, 224);
+    
+}
+.customInput:focus
+{
+    background-color: rgba(0, 0, 0, 0);
+}
+#submitBtns
+{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#submit
+{
+    background-color : rgb(240, 158, 66);
+    width : 7vw;
+    border : 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    font-weight: 500;
+    margin-right : 0.5vw;    
+}
+#reset
+{
+    background-color : rgb(184, 184, 184);
+    width : 7vw;
+    border : 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    font-weight: 500; 
+    margin-left : 0.5vw;    
+}
+@font-face{
+    font-family: Skyfall;
+    src : url(/assets/SkyFall.ttf);
+}
+h1{
+    font-family:SkyFall;
+}

@@ -1,0 +1,19 @@
+<video src="../assets/BackgroundRecordPlayer.mp4" autoplay loop muted></video>
+<div id="mainContainer">
+    <div id="formContainer">
+        <h1>Sign In</h1>
+        <form #f="ngForm" (submit)="onSignIn(f)">
+            <input type="text" class="form-control customInput" id="user" name="user" placeholder="User Name" ngModel>
+            <br/>
+            <br/>
+            <input type="password" class="form-control customInput" id="password" name="password" placeholder="Password" ngModel>
+            <br/>
+            <br/>
+            <div id="submitBtns">
+                    <input type="submit" class="form-control" value="Sign Up" id="submit">
+                    <input type="reset" class="form-control" id="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</div>
+
