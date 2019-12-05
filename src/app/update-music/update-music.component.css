@@ -1,0 +1,134 @@
+img{
+    width : 100vw;
+    height : 100vh;
+    position : absolute;
+    z-index: -2;
+}
+#mainContainer{
+    width : 100vw;
+    right : 0;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+#formContainer{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    width : 40vw;
+    height:90vh;
+    align-self: flex-end;
+    margin-right: 5vw;
+    backdrop-filter: blur(20px);
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@font-face{
+    font-family: Austin;
+    src : url(/assets/AustinFont.ttf);
+}
+#title
+{
+    font-family: Austin;
+    color : white;
+    text-shadow: 1px 1px black;
+    font-size: 5rem;
+}
+input{
+     width : 20vw;
+     border : 0px;
+     background-color: rgba(0,0,0,0);
+     border-bottom : 2px solid white;
+     color : white;
+     border-radius: 0;
+}
+input:focus
+{
+    background-color: rgba(0,0,0,0);
+    color: white;
+    
+}
+::placeholder{
+    color: rgb(219, 219, 219);
+    opacity: 1;
+}
+#price{
+    display : flex;
+}
+.photo{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.photoInput1
+{
+    display: none;
+}
+.photoInputContainer
+{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.photoContainer
+{
+    width : 8vw;
+    height : 5vh;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    border-radius : 10%;
+    color : white;
+    font-size: 0.75rem;
+}
+.photoName
+{
+    background-color: rgba(0, 0, 0, 0);
+    border : 0px;
+    border-bottom: 2px solid rgb(177, 177, 177);
+    width : 11vw;
+    margin-left : 1vw;
+}
+#submitBtns
+{
+    margin-bottom : 5vh;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+#submit
+{
+    width : 8vw;
+    height : 5vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    border-radius : 10%;
+    color : black;
+    font-size: 0.75rem;
+    margin-right: 1vw;
+    border : 0px;
+    cursor: pointer;
+}
+#reset
+{
+    width : 8vw;
+    height : 5vh;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    border-radius : 10%;
+    color : white;
+    font-size: 0.75rem;
+    margin-right: 1vw;
+    border : 0px;
+}

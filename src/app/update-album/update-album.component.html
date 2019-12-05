@@ -1,0 +1,52 @@
+<img id="wallpaper" src="../assets/AddAlbum2.jpg">
+<div id="mainContainer">
+    <div id="secondaryContainer">
+        <div id="formContainer">
+            <div id="title">Update Album</div>
+            <form [formGroup]="updateForm" (ngSubmit)="onUpdateAlbum()">
+                <input class="form-control" type="number" id="ref" name="ref" [placeholder]="album.ref" formControlName="ref">
+                <br/>
+                <input class="form-control" type="text" id="name" name="name" [placeholder]="album.name" formControlName="name">
+                <br/>
+                <input class="form-control" type="date" id="releaseDate" name="releaseDate"  [placeholder]="album.releaseDate" formControlName="releaseDate">
+                <br/>
+                <div id="price">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customPriceSwitch" name="customPriceCheck" formControlName="checkCustomPrice">
+                        <label class="custom-control-label" for="customPriceSwitch" ></label>
+                    </div>
+                    <input type="number" class="form-control" id="priceInput" name="priceInput"  placeholder="Custom Price" formControlName="price">
+                </div>
+                <br/>
+            <div id="photo">
+               <label for="photoInput">
+                   <div class="photoInputContainer">
+                       <div class="photoContainer">CHOOSE FILE</div>
+                       <div><input type="text" class="photoName" [placeholder]="album.photoSrc" name="photoName" [value]="photo" disabled></div>
+                   </div>
+                </label>
+                <input type="file" class="photoInput1" id="photoInput" name="photo" formControlName="photo"/>
+            </div>
+            <br/>
+            <div id="photo">
+               <label for="recordPhotoInput">
+                   <div class="photoInputContainer">
+                       <div class="photoContainer">CHOOSE FILE</div>
+                       <div><input type="text" class="photoName" [placeholder]="album.recordPhotoSrc" [value]="recordPhoto" name="recordPhotoName"  disabled></div>
+                   </div>
+                </label>
+                <input type="file" class="photoInput1" id="recordPhotoInput" name="recordPhoto" formControlName="recordPhoto"/>
+            </div>
+            <br/>
+            
+            <div id="submitBtns">
+                <button type="submit" [disabled]="updateForm.invalid" id="submit">Update Album</button>
+                <input type="reset" id="reset" value="Reset">
+            </div>
+            </form>
+        </div>
+        <div id="logosContainer">
+            <div id="img1"><img src="../assets/AddAlbum1.png"></div>
+        </div>
+    </div>
+</div>

@@ -34,6 +34,34 @@ export class Music{
   public set liked(value:boolean){
     this._liked = value;
   }
+  public set refArtist(ref:number)
+  {
+    this._refArtist = ref;
+  }
+  public set refAlbum(ref:number)
+  {
+    this._refAlbum = ref;
+  }
+  public set name(name:string)
+  {
+    this._name = name;
+  }
+  public set ref(ref:number)
+  {
+    this._ref = ref;
+  }
+  public set price(price:number)
+  {
+    this._price = price;
+  }
+  public set photo(photo:string)
+  {
+    this._photoRecord = photo;
+  }
+  public set duration(duration:string)
+  {
+    this._duration = duration;
+  }
 
   ngOnInit() {
   }

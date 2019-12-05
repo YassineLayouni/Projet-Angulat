@@ -1,0 +1,37 @@
+
+<div id="mainContainer">
+        <img src="../assets/AddMusic.jpg">
+        <div id="formContainer">
+            <div id="title">Add Music</div>
+            <form [formGroup]="updateForm" (submit)="onUpdateMusic()">
+                <input type="number" class="form-control" name="ref" [placeholder]="music.ref" formControlName="ref">
+                <br/>
+                <input type="text" class="form-control" name="name" [placeholder]="music.name" formControlName="name">
+                <br/>
+                <input type="text" class="form-control" name="duration" [placeholder]="music.duration" formControlName="duration">
+                <br/>
+                <div id="price">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" id="priceCheck" style="width : 2vw" name="priceCheck" class="custom-control-input" formControlName="checkCustomPrice">
+                        <label class="custom-control-label" for="priceCheck"></label>
+                    </div>
+                    <input style="width : 16vw;margin-left: 2vw;background-color: rgba(0,0,0,0);" class="form-control" type="number" name="customPrice" [placeholder]="music.price" formControlName="price" >
+                </div>
+                <br/>
+                <div id="photo">
+                    <label for="photoInput">
+                        <div class="photoInputContainer">
+                            <div class="photoContainer">CHOOSE FILE</div>
+                            <div><input type="text" class="photoName" [placeholder]="music.photoRecord" name="photoName" [value]="photo" disabled></div>
+                        </div>
+                    </label>
+                    <input type="file" class="photoInput1" id="photoInput" name="photo" formControlName="photo"/>
+                </div>
+                <br/>
+                <div id="submitBtns">
+                    <button type="submit" id="submit">Add Music</button>
+                    <input type="reset" id="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+</div>

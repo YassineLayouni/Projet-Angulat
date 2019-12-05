@@ -21,6 +21,11 @@ import { AlbumMusicInterfaceComponent } from './album-music-interface/album-musi
 import { AddArtistComponent } from './add-artist/add-artist.component';
 import { AddAlbumComponent } from './add-album/add-album.component';
 import { AddMusicComponent } from './add-music/add-music.component';
+import { UpdateArtistComponent } from './update-artist/update-artist.component';
+import { ReactiveFormsModule} from '@angular/forms';
+import { UpdateAlbumComponent } from './update-album/update-album.component';
+import { UpdateMusicComponent } from './update-music/update-music.component';
+
 
 @NgModule({
   declarations: [
@@ -40,11 +45,15 @@ import { AddMusicComponent } from './add-music/add-music.component';
     AddArtistComponent,
     AddAlbumComponent,
     AddMusicComponent,
+    UpdateArtistComponent,
+    UpdateAlbumComponent,
+    UpdateMusicComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,6 +26,21 @@ export class Artist{
   public set liked(value : boolean){
     this._liked = value;
   }
+  public set ref(ref:number){
+    this._ref = ref;
+  }
+  public set photo(photo:string){
+    this._photoSrc = photo;
+  }
+  public set profile(profile:string){
+    this._profilePhoto = profile;
+  }
+  public set background(background:string){
+    this._background = background;
+  }
+  public set name(name:string){
+    this._name = name;
+  }
   ngOnInit() {
   }
 

@@ -41,6 +41,28 @@ export class Album{
   public set liked(value:boolean){
     this._liked = value;
   }
+  public set refArtist(refArtist:number)
+  {
+    this._refArtist = refArtist;
+  }
+  public set ref(ref:number){
+    this._ref = ref;
+  }
+  public set name(name:string){
+    this._name = name;
+  }
+  public set photoSrc(photo:string){
+    this._photoSrc = photo;
+  }
+  public set recordPhoto(photo:string){
+    this._recordPhotoSrc = photo;
+  }
+  public set releaseDate(releaseDate:Date){
+    this._releaseDate = releaseDate;
+  }
+  public set price(price:number){
+    this._price = price;
+  }
   ngOnInit() {
   }
 

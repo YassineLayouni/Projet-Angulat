@@ -21,7 +21,7 @@ export class AddMusicComponent implements OnInit {
     this.photo = event.target.files[0].name
   }
   onAddMusic(f:NgForm)
-  {
+  { 
     alert(this.service.addMusic(this.artist,this.album,f.value['ref'],f.value['name'],"../assets/"+this.photo,f.value['duration'],f.value['customPrice']));
   }
   constructor(private service : ListService,private activatedRoute : ActivatedRoute) { }

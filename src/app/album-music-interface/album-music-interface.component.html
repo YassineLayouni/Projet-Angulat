@@ -10,6 +10,7 @@
                     </button>
                     <div class="dropdown-menu">
                         <a class="dropdown-item dropdown"  href="#">Buy Album</a>
+                        <a class="dropdown-item dropdown"  [routerLink]="['/Home/UpdateAlbum/',album.ref]">Update Album</a>
                         <a class="dropdown-item dropdown"  [routerLink]="['/Home/AddMusic/',album.ref]">Add Music</a>
                         <a class="dropdown-item dropdown"  href="#">Delete Album</a>
                     </div>
@@ -31,11 +32,13 @@
                         <div id="cardContainer">
                             <app-display-music [music]="m" [placement]="placement"></app-display-music>
                             <span style="margin-top: 5vh;">{{m.name}}</span>
+                            <span style="margin-top: 5vh;margin-left: 1vw;">{{m.duration}}</span>
                         </div>
                         
                         <div id="actions">
                             <span>{{m.price|currency}}</span>
                             <a><i class="fas fa-shopping-cart"></i></a>
+                            <a [routerLink]="['/Home/UpdateMusic/',m.ref]"><i class="fas fa-cog"></i></a>
                             <a><i class="fas fa-trash"></i></a>
                         </div>
                     </li>

@@ -162,6 +162,28 @@ export class ListService {
     }
     return false;
   }
+  updateArtist(oldRef:number,ref:number,name:string,photo:string,profile:string,background:string)
+  {
+    if(this.getArtist(ref)==null)
+    {
+      this.getArtist(oldRef).ref=ref;
+      this.getArtist(ref).name=name;
+      this.getArtist(ref).photo=photo;
+      this.getArtist(ref).profile=profile;
+      this.getArtist(ref).background=background;
+      for(let i = 0;i<this.getArtist(ref).albums.length;i++)
+      {
+        this.getArtist(ref).albums[i].refArtist = ref;
+        for(let y = 0;y<this.getArtist(ref).albums[i].music.length;y++)
+        {
+            this.getArtist(ref).albums[i].music[y].refArtist = ref;
+        }
+      }
+      
+      return true;
+    }
+    return false;
+  }
 
   deleteArtist(artist : Artist)
   {
@@ -180,6 +202,25 @@ export class ListService {
     }
     return false;
   }
+  updateAlbum(oldRef:number,ref:number,name:string,photo:string,recordPhoto:string,releaseDate:Date,price:number)
+  {
+    if(this.getAlbum(ref)==null)
+    {
+      this.getAlbum(oldRef).ref = ref;
+      this.getAlbum(ref).name = name;
+      this.getAlbum(ref).photoSrc = photo ;
+      this.getAlbum(ref).recordPhoto = recordPhoto;
+      this.getAlbum(ref).releaseDate = releaseDate;
+      this.getAlbum(ref).price = price;
+      for(let i = 0;i<this.getAlbum(ref).music.length;i++)
+      {
+        this.getAlbum(ref).music[i].refAlbum = ref;
+      }
+      return true
+       
+    }
+    return false;
+  }
   
   deleteAlbum(artist : Artist,album : Album)
   {
@@ -195,6 +236,20 @@ export class ListService {
     }
     return false;
   }
+  updateMusic(oldRef:number,ref:number,name:string,photo:string,duration:string,price:number)
+  {
+    if(this.getMusic(ref)==null)
+    {
+      this.getMusic(oldRef).ref = ref;
+      this.getMusic(ref).name = name;
+      this.getMusic(ref).photo = photo;
+      this.getMusic(ref).duration = duration;
+      this.getMusic(ref).price = price;
+      return true;
+    }
+    return false;
+  }
+  
   
   deleteMusic(album:Album,music : Music)
   {
