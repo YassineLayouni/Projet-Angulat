@@ -43,12 +43,12 @@ input{
      border-bottom : 2px solid white;
      color : white;
      border-radius: 0;
+     text-align: center;
 }
 input:focus
 {
     background-color: rgba(0,0,0,0);
     color: white;
-    
 }
 ::placeholder{
     color: rgb(219, 219, 219);
@@ -131,4 +131,9 @@ input:focus
     font-size: 0.75rem;
     margin-right: 1vw;
     border : 0px;
+}
+.invalid 
+{
+    color : rgb(243, 43, 43);
+    text-align: center;
 }

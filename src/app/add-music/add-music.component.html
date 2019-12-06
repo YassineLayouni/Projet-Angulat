@@ -4,11 +4,16 @@
         <div id="formContainer">
             <div id="title">Add Music</div>
             <form #f="ngForm" (submit)="onAddMusic(f)">
-                <input type="number" class="form-control" name="ref" placeholder="Identification" ngModel>
+                <input type="number" class="form-control" name="ref" placeholder="Identification" #ref="ngModel" required ngModel>
+                <div *ngIf="ref.touched&&ref.invalid" class="invalid">Identification is required</div>
+                <div *ngIf="ref.dirty&&findReference(ref.value)" class="invalid">Reference already exists</div>
                 <br/>
-                <input type="text" class="form-control" name="name" placeholder="Name" ngModel>
+                <input type="text" class="form-control" name="name" placeholder="Name" #name="ngModel" required ngModel>
+                <div *ngIf="name.touched&&name.invalid" class="invalid">Identification is required</div>
+
                 <br/>
-                <input type="text" class="form-control" name="duration" placeholder="Duration Ex:  3:25" ngModel>
+                <input type="text" class="form-control" name="duration" placeholder="Duration Ex:  3:25" pattern="[0-9]+:[0-5][0-9]" #duration="ngModel" ngModel>
+                <div *ngIf="duration.dirty&&duration.errors?.pattern" class="invalid">Incorrect Format ex : 3:25</div>
                 <br/>
                 <div id="price">
                     <div class="custom-control custom-switch">
@@ -22,14 +27,14 @@
                     <label for="photoInput">
                         <div class="photoInputContainer">
                             <div class="photoContainer">CHOOSE FILE</div>
-                            <div><input type="text" class="photoName" placeholder="Input Photo" name="photoName" [(ngModel)]="photo" disabled></div>
+                            <div><input type="text" class="photoName" placeholder="Input Photo" style="width:10vw" name="photoName" [(ngModel)]="photo" disabled></div>
                         </div>
                     </label>
                     <input type="file" class="photoInput1" id="photoInput" name="photo" (input)="onInputPhoto($event)"/>
                 </div>
                 <br/>
                 <div id="submitBtns">
-                    <button type="submit" id="submit">Add Music</button>
+                    <button type="submit" [disabled]="f.invalid||findReference(ref.value)" id="submit">Add Music</button>
                     <input type="reset" id="reset" value="Reset">
                 </div>
             </form>

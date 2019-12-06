@@ -45,51 +45,53 @@
     <div id="adding">
         <p id="title">Add New Artist</p><br/>
         <form #f="ngForm" (ngSubmit)="onAddArtist(f)">
-            <label for="ref">Identification</label>
-            <input class="form-control" type="number" id="ref" name="ref" required placeholder="Ex : 591357" ngModel>
+            <input class="form-control" type="number" id="ref" name="ref" required placeholder="Reference" required #ref="ngModel" ngModel>
+            <div *ngIf="ref.touched&&ref.invalid" class="invalid">Identification is required</div>
+            <div *ngIf="ref.dirty&&findReference(ref.value)" class="invalid">Reference already exists</div>
             <br/>
-            <label for="name">Name & Last Name</label>
-            <input class="form-control" type="text" id="name" name="name" required placeholder="Ex : Bob Dylan" ngModel>
+            <input class="form-control" type="text" id="name" name="name" required placeholder="Name & Last Name" #name="ngModel" ngModel>
+            <div *ngIf="name.touched&&name.invalid" class="invalid">Name is required</div>
+
             <br/>
             
-            <label>Photo</label>
+    
             <div id="photo">
                <label for="photoInput">
                    <div class="photoInputContainer">
                        <div class="photoContainer">CHOOSE FILE</div>
-                       <div><input type="text" class="photoName" placeholder="Input Photo" name="photoName" [(ngModel)]="photo" disabled></div>
+                       <div><input type="text" class="photoName" placeholder="Input Photo from assets" name="photoName" [(ngModel)]="photo" disabled></div>
                    </div>
                 </label>
                 <input type="file" class="photoInput1" id="photoInput" name="photo" (input)="onInputPhoto($event)"/>
             </div>
             <br/>
 
-            <label>Profile Photo</label>
+            
             <div class="photo">
                <label for="profilePhotoInput">
                    <div class="photoInputContainer">
                        <div class="photoContainer">CHOOSE FILE</div>
-                       <div><input type="text" class="photoName" placeholder="Input Profile Photo" name="profilePhotoName" [(ngModel)]="profilePhoto" disabled></div>
+                       <div><input type="text" class="photoName" placeholder="Input Profile Photo fom assets" name="profilePhotoName" [(ngModel)]="profilePhoto" disabled></div>
                    </div>
                 </label>
                 <input type="file" class="photoInput1" id="profilePhotoInput" name="profilePhoto" (input)="onInputProfilePhoto($event)"/>
             </div>
             <br/>
 
-            <label>background Photo</label>
+            
             <div class="photo">
                <label for="backgroundPhotoInput">
                    <div class="photoInputContainer">
                        <div class="photoContainer">CHOOSE FILE</div>
-                       <div><input type="text" class="photoName" placeholder="Input Background Photo" name="backgroundPhoto    Name" [(ngModel)]="backgroundPhoto" disabled></div>
+                       <div><input type="text" class="photoName" placeholder="Input Background Photo from assets" name="backgroundPhotoName" [(ngModel)]="backgroundPhoto" disabled></div>
                    </div>
                 </label>
-                <input type="file" class="photoInput1" id="backgroundPhotoInput" name="backgroundPhoto" (input)="onInputBackgroundPhoto($event)"/>
+                <input type="file" class="photoInput1" id="backgroundPhotoInput" name="backgroundPhoto" (input)="onInputBackgroundPhoto($event)" ngModel/>
             </div>
             <br/>
 
             <div id="submitBtns">
-                <button type="submit" [disabled]="f.invalid" id="submit">Add Artist</button>
+                <button type="submit" [disabled]="f.invalid&&findReference(ref.value)" id="submit">Add Artist</button>
                 <input type="reset" id="reset" value="Reset">
             </div>
 

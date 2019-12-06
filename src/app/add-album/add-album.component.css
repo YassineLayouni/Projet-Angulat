@@ -165,3 +165,8 @@ form{
     margin-right: 1vw;
     border : 0px;
 }
+.invalid 
+{
+    color : rgb(243, 43, 43);
+    text-align: center;
+}

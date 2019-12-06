@@ -37,7 +37,7 @@ img{
 #title{
     font-family:Title ;
     color : white;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 @font-face{
     font-family: Title;
@@ -56,6 +56,7 @@ form{
 }
 input{
     width : 35vw;
+    text-align: center;
 }
 .photo{
     display : flex;
@@ -131,4 +132,9 @@ input{
     font-size: 0.75rem;
     margin-right: 1vw;
     border : 0px;
+}
+.invalid 
+{
+    color : rgb(243, 43, 43);
+    text-align: center;
 }

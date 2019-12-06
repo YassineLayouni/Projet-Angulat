@@ -6,7 +6,7 @@ img {
 }
 .card{
     width:17vw;
-    height : 33vh;
+    height : auto;
     background-color : rgb(0,0,0,0);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color : rgb(219, 208, 208);

@@ -15,6 +15,14 @@ export class AddAlbumComponent implements OnInit {
   check;
   photo : string;
   recordPhoto : string;
+  findReference(ref:number)
+  {
+    if(this.service.getAlbum(ref)!=null)
+    {
+      return true;
+    }
+    return false;
+  }
   onInputPhoto(event:any)
   {
     this.photo = event.target.files[0].name;
@@ -25,8 +33,7 @@ export class AddAlbumComponent implements OnInit {
   }
   onAddAlbum(f:NgForm)
   {
-    alert("sdfsf");
-    alert(this.service.addAlbum(this.artist,f.value['ref'],f.value['name'],"../assets/"+this.photo,"../assets/"+this.recordPhoto,f.value['releaseDate'],f.value['priceInput']));
+    this.service.addAlbum(this.artist,f.value['ref'],f.value['name'],"../assets/"+this.photo,"../assets/"+this.recordPhoto,f.value['releaseDate'],f.value['priceInput']);
   }
   
   constructor(private activatedRoute:ActivatedRoute,private service:ListService) { }

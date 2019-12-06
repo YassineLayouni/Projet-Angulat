@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Music } from './Classes/Music';
 import { Album } from './Classes/Album';
 import { Artist } from './Classes/Artist';
+import { User } from './Classes/User';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ export class ListService {
   refAlbum : number = 0;
   refMusic : number = 0;
   search : string ="";
+  signIn : boolean = false;
   
   
   tabMusic : Music[][] = [    [new Music(this.refMusic++,"Sisyphus",0,0,"../assets/MyFinestWorkYetRecord.png","4:07",false,0.5,false),new Music(this.refMusic++,"Bloodless",0,0,"../assets/MyFinestWorkYetRecord.png","6:29",false,0.5,false),new Music(this.refMusic++,"Olympians",0,0,"../assets/MyFinestWorkYetRecord.png","3:58",false,0.5,false),new Music(this.refMusic++,"Manifest",0,0,"../assets/MyFinestWorkYetRecord.png","5:17",false,0.5,false),new Music(this.refMusic++,"Cracking Codes",0,0,"../assets/MyFinestWorkYetRecord.png","3:12",false,0.5,false)],
@@ -65,6 +67,9 @@ export class ListService {
                                     new Artist(this.refArtist,"Tom Rosenthal",this.rechercheListAlbum(this.refArtist++),"../assets/TomRosenthal.jpg","../assets/TomRosenthalProfile.jpg","../assets/TomRosenthalBackground.jpg",false),
                           
                                   ];
+
+
+  tabUsers : User[] = [new User("administrateur","administrateur"),new User("d","d")];
 
   rechercheListMusic(ref : number):Music[]{
     for(let i  = 0; i < this.tabMusic.length;i++)
@@ -298,6 +303,28 @@ export class ListService {
   deleteMusic(album:Album,music : Music)
   {
     album.music.splice(album.music.indexOf(music),1);
+  }
+
+  getUser(name : string)
+  {
+    for(let u of this.tabUsers)
+    {
+      if(u.userName == name)
+      {
+        return u;
+      }
+    }
+    return null;
+  }
+
+  addUser(name : string,password:string)
+  {
+    if(this.getUser(name)==null)
+    {
+      this.tabUsers.push(new User(name,password));
+      return true;
+    }
+    return false;
   }
   constructor() { }
 }

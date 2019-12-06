@@ -1,2 +1,8 @@
-<app-menu></app-menu>
+<ng-container *ngIf="this.service.signIn">
+    <app-menu></app-menu>
+</ng-container>
 <router-outlet></router-outlet>
+
+
+
+

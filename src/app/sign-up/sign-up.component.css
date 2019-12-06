@@ -43,6 +43,7 @@ form{
     border-bottom : 2px solid rgb(240, 158, 66) ;
     border-radius: 0;
     width : 25vw;
+    color : white;
 }
 .customInput::placeholder
 {
@@ -68,7 +69,7 @@ form{
     border : 0px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
     font-weight: 500;
-    margin-right : 0.5vw;    
+    margin-right : 0.5vw;
 }
 #reset
 {

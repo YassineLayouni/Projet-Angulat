@@ -1,19 +1,26 @@
-<video src="../assets/BackgroundRecordPlayer.mp4" autoplay loop muted></video>
+<video id="vid" src="../assets/BackgroundRecordPlayer.mp4" autoplay loop muted></video>
 <div id="mainContainer">
     <div id="formContainer">
         <h1>Sign In</h1>
         <form #f="ngForm" (submit)="onSignIn(f)">
-            <input type="text" class="form-control customInput" id="user" name="user" placeholder="User Name" ngModel>
+            <input type="text" class="form-control customInput" id="user" name="user" placeholder="User Name" #user="ngModel" required ngModel>
+            <div *ngIf="user.invalid&&user.touched" class="invalid">User Name is required</div>
             <br/>
             <br/>
-            <input type="password" class="form-control customInput" id="password" name="password" placeholder="Password" ngModel>
+            <input type="password" class="form-control customInput" id="password" name="password" placeholder="Password" #password="ngModel" required ngModel>
+            <div *ngIf="password.invalid&&password.touched" class="invalid">Password is required</div>
+            <div *ngIf="user.dirty&&password.touched&&!checkPasswordAndUser(user.value,password.value)" class="invalid">Incorrect password or user name</div>
             <br/>
             <br/>
             <div id="submitBtns">
-                    <input type="submit" class="form-control" value="Sign Up" id="submit">
+                    <a [routerLink]="'/Home'" (click)="onSignIn()"><input type="submit" [disabled]="!checkPasswordAndUser(user.value,password.value)||f.invalid" class="form-control" value="Sign In" id="submit"></a>
                     <input type="reset" class="form-control" id="reset" value="Reset">
             </div>
         </form>
+        <br/>
+        <br/>
+        <a [routerLink]="'/SignUp'" ><p>Dont have an account? create one here</p></a>
     </div>
 </div>
+
 

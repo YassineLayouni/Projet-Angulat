@@ -12,9 +12,10 @@ import { UpdateAlbumComponent } from '../update-album/update-album.component';
 import { UpdateMusicComponent } from '../update-music/update-music.component';
 import { SearchComponent } from '../search/search.component';
 import { SignInComponent } from '../sign-in/sign-in.component';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 
     const routes: Routes = [
-        {path: '',component: DashboardComponent},
+        {path: '',component: SignInComponent},
         {path:'Home',component:DebutComponent},
         {path:'Home/Artist/:idArtist',component:ArtistInterfaceComponent},
         {path:'Home/Artist/Album&Music/:idAlbum',component:AlbumMusicInterfaceComponent},
@@ -25,7 +26,8 @@ import { SignInComponent } from '../sign-in/sign-in.component';
         {path:'Home/UpdateAlbum/:idAlbum',component:UpdateAlbumComponent},
         {path:'Home/UpdateMusic/:idMusic',component:UpdateMusicComponent},
         {path:'Search',component:SearchComponent},
-        {path:'SignIn',component:SignInComponent}
+        {path:'SignIn',component:SignInComponent},
+        {path : 'SignUp',component:SignUpComponent}
     ];
 
     @NgModule({

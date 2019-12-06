@@ -1,0 +1,28 @@
+<video src="../assets/BackgroundRecordPlayer.mp4" autoplay loop muted></video>
+<div id="mainContainer">
+    <div id="formContainer">
+        <h1>Sign Up</h1>
+        <form #f="ngForm" >
+            <input type="text" class="form-control customInput" id="user" name="user" placeholder="User Name" maxlength="20" required #userName="ngModel" ngModel>
+            <div *ngIf="userName.invalid&&userName.touched" class="invalid">User Name is Required</div>
+            <div *ngIf="this.service.getUser(userName.value)!=null" class="invalid">User Name already taken</div>
+            <br/>
+            <br/>
+            <input type="password" class="form-control customInput" id="password" name="password" placeholder="Password" #password="ngModel" maxlength="20" required ngModel>
+            <div *ngIf="password.invalid&&password.touched" class="invalid">Password is required</div>
+            <br/>
+            <br/>
+            <input type="password" class="form-control customInput" id="repeatPassword" name="repeatPassword" placeholder="Repeat Password" maxlength="20" #repeatPassword="ngModel" required ngModel>
+            <div *ngIf="repeatPassword.invalid&&repeatPassword.touched" class="invalid">Repeat Password is required</div>
+            <div *ngIf="repeatPassword.value!=password.value" class="invalid">The 2 passwords must be identical</div>
+            <br/>
+            <br/>
+            <div id="submitBtns">
+                    <a [routerLink]="'/SignIn'" (click)="onSignUp(f)"><input type="submit" [disabled]="f.invalid||repeatPassword.value!=password.value||this.service.getUser(userName.value)!=null" class="form-control" value="Sign Up" id="submit"></a>
+                    <input type="reset" class="form-control" id="reset" value="Reset">
+            </div>
+        </form>
+        <br/>
+        <br/>
+    </div>
+</div>

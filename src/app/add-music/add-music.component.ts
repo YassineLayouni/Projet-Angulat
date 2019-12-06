@@ -16,6 +16,14 @@ export class AddMusicComponent implements OnInit {
   artist : Artist;
   check;
   photo : string;
+  findReference(ref:number)
+  {
+    if(this.service.getMusic(ref)!=null)
+    {
+      return true;
+    }
+    return false;
+  }
   onInputPhoto(event:any)
   {
     this.photo = event.target.files[0].name

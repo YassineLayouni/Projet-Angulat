@@ -8,9 +8,17 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./add-artist.component.css']
 })
 export class AddArtistComponent implements OnInit {
-  photo : string = "Input Photo";
-  profilePhoto : string = "Input Profile Photo";
-  backgroundPhoto : string = "Input Background Photo";
+  photo : string = "Input Photo from assets";
+  profilePhoto : string = "Input Profile Photo from assets";
+  backgroundPhoto : string = "Input Background Photo from assets";
+  findReference(ref:number)
+  {
+    if(this.service.getArtist(ref)!=null)
+    {
+      return true;
+    }
+    return false;
+  }
   onInputPhoto(event:any)
   {
     this.photo = event.target.files[0].name;
