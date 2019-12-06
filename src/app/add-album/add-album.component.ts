@@ -34,6 +34,7 @@ export class AddAlbumComponent implements OnInit {
   onAddAlbum(f:NgForm)
   {
     this.service.addAlbum(this.artist,f.value['ref'],f.value['name'],"../assets/"+this.photo,"../assets/"+this.recordPhoto,f.value['releaseDate'],f.value['priceInput']);
+    if(!f.value['customPriceCheck']){this.service.getAlbum(f.value['ref']).price = this.service.getPrice(this.service.getAlbum(f.value['ref']).music)}
   }
   
   constructor(private activatedRoute:ActivatedRoute,private service:ListService) { }

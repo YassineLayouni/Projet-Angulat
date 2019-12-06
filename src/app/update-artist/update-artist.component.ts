@@ -16,7 +16,7 @@ export class UpdateArtistComponent implements OnInit {
   updateForm : FormGroup;
   findReference(ref:number)
   {
-    if(this.service.getArtist(ref)!=null)
+    if((this.service.getArtist(ref)!=null)&&(this.ref != this.refArtist))
     {
       return true;
     }
@@ -24,10 +24,11 @@ export class UpdateArtistComponent implements OnInit {
   }
   onUpdateArtist()
   {
-    if(this.ref == undefined)this.ref = this.refArtist;
-    if(this.name == undefined)this.ref = this.refArtist;
-    if(this.ref == undefined)this.ref = this.refArtist;
-    alert(this.service.updateArtist(this.refArtist,this.ref,this.name,"../assets/"+this.photo,"../assets/"+this.profilePhoto,"../assets/"+this.backgroundPhoto));
+    if(this.name == "")this.updateForm.get('name').setValue(this.artist.name);
+    if(this.service.updateArtist(this.refArtist,this.ref,this.name,"../assets/"+this.photo,"../assets/"+this.profilePhoto,"../assets/"+this.backgroundPhoto))
+    {
+      alert("Artist Updated Successfully!!")
+    };
   }
   constructor(private service:ListService,private activatedRoute:ActivatedRoute,private formBuilder : FormBuilder) { }
 
@@ -35,7 +36,7 @@ export class UpdateArtistComponent implements OnInit {
     this.refArtist = this.activatedRoute.snapshot.params['idArtist'];
     this.artist = this.service.getArtist(this.refArtist);
     this.updateForm = this.formBuilder.group(
-      {ref:[''],
+      {ref:['',Validators.required],
        name:[''],
        photo:[''],
        profilePhoto:[''],
@@ -46,32 +47,20 @@ export class UpdateArtistComponent implements OnInit {
   public get ref(){
     return this.updateForm.get('ref').value; 
   }
-  public set ref(ref:number)
-  {
-    this.ref = ref;
+  public get ref1(){
+    return this.updateForm.get('ref'); 
   }
   public get name(){
     return this.updateForm.get('name').value;
   }
-  public set name(name:string)
-  {
-    this.name = name;
-  }
   public get photo(){
     return this.updateForm.get('photo').value.substr(12);
   }
-  public set photo(photo:string){
-    this.photo = photo.substr(12);
-  }
-  public set profilePhoto(profilePhoto:string){
-    this.profilePhoto = profilePhoto.substr(12);
-  }
+ 
   public get profilePhoto(){
     return this.updateForm.get('profilePhoto').value.substr(12);
   }
-  public get backgroundPhoto(){
-    return this.updateForm.get('backgroundPhoto').value.substr(12);
-  }
+  
   public get backgroundPhoto(){
     return this.updateForm.get('backgroundPhoto').value.substr(12);
   }

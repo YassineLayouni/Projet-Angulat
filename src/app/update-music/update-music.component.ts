@@ -14,10 +14,23 @@ export class UpdateMusicComponent implements OnInit {
   refMusic : number;
   music : Music;
   updateForm : FormGroup;
+  findReference(ref:number)
+  {
+    if((this.service.getMusic(ref)!=null)&&(this.ref != this.refMusic))
+    {
+      return true;
+    }
+    return false;
+  }
   onUpdateMusic()
   {
-    alert(this.service.updateMusic(this.refMusic,this.ref,this.name,"../assets/"+this.photo,this.duration,this.price));
+    if(this.name == "")this.updateForm.get('name').setValue(this.music.name);
+    if(this.service.updateMusic(this.refMusic,this.ref,this.name,"../assets/"+this.photo,this.duration,this.price))
+    {
+      alert("Music Updated Successfully");
+    };
   }
+
   constructor(private service:ListService,private activatedRoute:ActivatedRoute,private formBuilder : FormBuilder) { }
 
   ngOnInit() {
@@ -25,9 +38,9 @@ export class UpdateMusicComponent implements OnInit {
     this.music = this.service.getMusic(this.refMusic);
     this.updateForm = this.formBuilder.group(
       {
-        ref:[''],
+        ref:['',Validators.required],
         name:[''],
-        duration:[''],
+        duration:['',Validators.pattern("[0-9]+:[0-5][0-9]")],
         checkCustomPrice:[false],
         price:[''],
         photo:['']
@@ -38,6 +51,10 @@ export class UpdateMusicComponent implements OnInit {
   {
     return this.updateForm.get('ref').value;
   }
+  public get ref1()
+  {
+    return this.updateForm.get('ref');
+  }
   public get name()
   {
     return this.updateForm.get('name').value;
@@ -45,6 +62,10 @@ export class UpdateMusicComponent implements OnInit {
   public get duration()
   {
     return this.updateForm.get('duration').value;
+  }
+  public get duration1()
+  {
+    return this.updateForm.get('duration');
   }
   public get price()
   {

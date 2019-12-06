@@ -91,7 +91,7 @@
             <br/>
 
             <div id="submitBtns">
-                <button type="submit" [disabled]="f.invalid&&findReference(ref.value)" id="submit">Add Artist</button>
+                <button type="submit" [disabled]="f.invalid||findReference(ref.value)" id="submit">Add Artist</button>
                 <input type="reset" id="reset" value="Reset">
             </div>
 

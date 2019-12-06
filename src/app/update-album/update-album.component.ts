@@ -14,9 +14,21 @@ export class UpdateAlbumComponent implements OnInit {
   refAlbum;
   album : Album;
   updateForm :FormGroup;
+  findReference(ref:number)
+  {
+    if((this.service.getAlbum(ref)!=null)&&(this.ref != this.refAlbum))
+    {
+      return true;
+    }
+    return false;
+  }
   onUpdateAlbum()
   {
-    alert(this.service.updateAlbum(this.refAlbum,this.ref,this.name,"../assets/"+this.photo,"../assets/"+this.recordPhoto,this.releaseDate,this.price));
+    if(this.name == "")this.updateForm.get('name').setValue(this.album.name);
+    if(this.service.updateAlbum(this.refAlbum,this.ref,this.name,"../assets/"+this.photo,"../assets/"+this.recordPhoto,this.releaseDate,this.price))
+    {
+      alert("Album Updated Successfully");
+    };
   }
   constructor(private service:ListService,private activatedRoute:ActivatedRoute,private formBuilder : FormBuilder) { }
 
@@ -24,7 +36,7 @@ export class UpdateAlbumComponent implements OnInit {
     this.refAlbum = this.activatedRoute.snapshot.params['idAlbum'];
     this.album = this.service.getAlbum(this.refAlbum);
     this.updateForm = this.formBuilder.group(
-      {ref:[''],
+      {ref:['',Validators.required],
        name:[''],
        releaseDate:[''],
        checkCustomPrice:[false],
@@ -37,6 +49,9 @@ export class UpdateAlbumComponent implements OnInit {
   }
   public get ref(){
     return this.updateForm.get('ref').value;
+  }
+  public get ref1(){
+    return this.updateForm.get('ref');
   }
   public get name(){
     return this.updateForm.get('name').value;

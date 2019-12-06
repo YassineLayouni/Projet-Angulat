@@ -12,7 +12,7 @@
             <div class="dropdown-menu">
                 <a class="dropdown-item" [routerLink]="['/Home/AddAlbum',artist.ref]">Add Album</a>
                 <a class="dropdown-item" [routerLink]="['/Home/UpdateArtist',artist.ref]">Update Artist</a>
-                <a class="dropdown-item" href="#">Delete Artist</a>
+                <a class="dropdown-item" [routerLink]="'/Home'" (click)="this.service.deleteArtist(artist)">Delete Artist</a>
             </div>
         </div>   
         </div>  

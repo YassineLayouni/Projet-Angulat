@@ -44,7 +44,7 @@
             <br/>
             
             <div id="submitBtns">
-                <button type="submit" [disabled]="f.invalid&&findReference(ref.value)" id="submit">Add Album</button>
+                <button type="submit" [disabled]="f.invalid||findReference(ref.value)" id="submit">Add Album</button>
                 <input type="reset" id="reset" value="Reset">
             </div>
             </form>

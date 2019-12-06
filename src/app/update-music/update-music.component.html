@@ -3,12 +3,15 @@
         <img src="../assets/AddMusic.jpg">
         <div id="formContainer">
             <div id="title">Update Music</div>
-            <form [formGroup]="updateForm" (submit)="onUpdateMusic()">
+            <form [formGroup]="updateForm" >
                 <input type="number" class="form-control" name="ref" [placeholder]="music.ref" formControlName="ref">
+                <div *ngIf="ref1.touched&&ref1.invalid" class="invalid">Identification is required</div>
+                <div *ngIf="ref1.dirty&&findReference(ref)" class="invalid">Reference already exists</div>
                 <br/>
                 <input type="text" class="form-control" name="name" [placeholder]="music.name" formControlName="name">
                 <br/>
                 <input type="text" class="form-control" name="duration" [placeholder]="music.duration" formControlName="duration">
+                <div *ngIf="duration1.dirty&&duration1.invalid" class="invalid">Incorrect Format</div>
                 <br/>
                 <div id="price">
                     <div class="custom-control custom-switch">
@@ -29,7 +32,7 @@
                 </div>
                 <br/>
                 <div id="submitBtns">
-                    <button type="submit" id="submit">Add Music</button>
+                    <a [routerLink]="'/Home'"><button type="submit" (click)="onUpdateMusic()" [disabled]="updateForm.invalid||findReference(ref)" id="submit">Add Music</button></a>
                     <input type="reset" id="reset" value="Reset">
                 </div>
             </form>

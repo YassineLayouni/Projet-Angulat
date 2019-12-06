@@ -3,8 +3,10 @@
     <div id="secondaryContainer">
         <div id="formContainer">
             <div id="title">Update Album</div>
-            <form [formGroup]="updateForm" (ngSubmit)="onUpdateAlbum()">
+            <form [formGroup]="updateForm" >
                 <input class="form-control" type="number" id="ref" name="ref" [placeholder]="album.ref" formControlName="ref">
+                <div *ngIf="ref1.touched&&ref1.invalid" class="invalid">Identification is required</div>
+                <div *ngIf="ref1.dirty&&findReference(ref)" class="invalid">Reference already exists</div>
                 <br/>
                 <input class="form-control" type="text" id="name" name="name" [placeholder]="album.name" formControlName="name">
                 <br/>
@@ -40,7 +42,7 @@
             <br/>
             
             <div id="submitBtns">
-                <button type="submit" [disabled]="updateForm.invalid" id="submit">Update Album</button>
+                <a [routerLink]="'/Home'"><input type="submit" (click)="onUpdateAlbum()" [disabled]="updateForm.invalid||findReference(ref)" id="submit" value="Update Album"></a>
                 <input type="reset" id="reset" value="Reset">
             </div>
             </form>

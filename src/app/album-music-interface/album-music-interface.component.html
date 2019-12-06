@@ -12,7 +12,7 @@
                         <a class="dropdown-item dropdown"  href="#">Buy Album</a>
                         <a class="dropdown-item dropdown"  [routerLink]="['/Home/UpdateAlbum/',album.ref]">Update Album</a>
                         <a class="dropdown-item dropdown"  [routerLink]="['/Home/AddMusic/',album.ref]">Add Music</a>
-                        <a class="dropdown-item dropdown"  href="#">Delete Album</a>
+                        <a class="dropdown-item dropdown"  [routerLink]="['/Home/Artist/',artist.ref]" (click)="this.service.deleteAlbum(artist,album)">Delete Album</a>
                     </div>
                 </div> 
             </div>
@@ -39,7 +39,7 @@
                             <span>{{m.price|currency}}</span>
                             <a><i class="fas fa-shopping-cart"></i></a>
                             <a [routerLink]="['/Home/UpdateMusic/',m.ref]"><i class="fas fa-cog"></i></a>
-                            <a><i class="fas fa-trash"></i></a>
+                            <a (click)="this.service.deleteMusic(album,m)"><i class="fas fa-trash"></i></a>
                         </div>
                     </li>
                 </ng-container>

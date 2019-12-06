@@ -17,7 +17,6 @@ export class AlbumMusicInterfaceComponent implements OnInit {
   music : Music[];
   artist : Artist;
   placement:string = "album";
-
   
 
 
@@ -28,7 +27,6 @@ export class AlbumMusicInterfaceComponent implements OnInit {
     this.album = this.service.getAlbum(this.idAlbum);
     this.artist = this.service.getArtist(this.album.refArtist);
     this.music = this.album.music;
-   
   }
 
 }

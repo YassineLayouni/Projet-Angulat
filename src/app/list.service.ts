@@ -32,25 +32,24 @@ export class ListService {
                               ];
   
   
-  tabAlbums : Album[][] = [   [new Album(this.refAlbum,"My Finest Work Yet",0,this.rechercheListMusic(this.refAlbum++),"../assets/MyFinestWorkYetAlbum.jpg","../assets/MyFinestWorkYetRecord.png",new Date("2019"),false,50,false),],
-                              [new Album(this.refAlbum,"Staying At Tamara's",1,this.rechercheListMusic(this.refAlbum++),"../assets/StayingAtTamaras.jpg","../assets/StayingAtTamaras.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Dream Boat Annie",2,this.rechercheListMusic(this.refAlbum++),"../assets/DreamBoatAnnie.jpg","../assets/DreamBoatAnnie.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Awaken, My Love",3,this.rechercheListMusic(this.refAlbum++),"../assets/AwakenMyLove.jpg","../assets/AwakenMyLove.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"The Lumineers",4,this.rechercheListMusic(this.refAlbum++),"../assets/The Lumineers.jpg","../assets/The Lumineers.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Blond",5,this.rechercheListMusic(this.refAlbum++),"../assets/Blond.jpg","../assets/Blond.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Carrie&Lowell",6,this.rechercheListMusic(this.refAlbum++),"../assets/Carrie&Lowell.jpg","../assets/Carrie&Lowell.png",new Date("2019"),false,50,false),],
-                              [new Album(this.refAlbum,"22, A Million ",7,this.rechercheListMusic(this.refAlbum++),"../assets/22AMillion.jpg","../assets/22AMillion.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Yellow Brick Road",8,this.rechercheListMusic(this.refAlbum++),"../assets/YellowBrickRoad.jpg","../assets/YellowBrickRoad.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Interstellar",9,this.rechercheListMusic(this.refAlbum++),"../assets/Interstellar.jpg","../assets/Interstellar.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Wild Youth",10,this.rechercheListMusic(this.refAlbum++),"../assets/WildYouth.jpg","../assets/WildYouth.png",new Date("2019"),false,50,false),],
-                              [new Album(this.refAlbum,"Dream Your Life Away",11,this.rechercheListMusic(this.refAlbum++),"../assets/DreamYourLifeAway.jpg","../assets/DreamYourLifeAway.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Songs From A Room",12,this.rechercheListMusic(this.refAlbum++),"../assets/SongsFromARoom.jpg","../assets/SongsFromARoom.png",new Date("2019"),false,50,false)],
-                              [new Album(this.refAlbum,"Z-Sides",13,this.rechercheListMusic(this.refAlbum++),"../assets/Z-Sides.jpg","../assets/Z-Sides.png",new Date("01/05/2019"),false,50,false)],
+  tabAlbums : Album[][] = [   [new Album(this.refAlbum,"My Finest Work Yet",0,this.rechercheListMusic(this.refAlbum),"../assets/MyFinestWorkYetAlbum.jpg","../assets/MyFinestWorkYetRecord.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false),],
+                              [new Album(this.refAlbum,"Staying At Tamara's",1,this.rechercheListMusic(this.refAlbum),"../assets/StayingAtTamaras.jpg","../assets/StayingAtTamaras.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
+                              [new Album(this.refAlbum,"Dream Boat Annie",2,this.rechercheListMusic(this.refAlbum),"../assets/DreamBoatAnnie.jpg","../assets/DreamBoatAnnie.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
+                              [new Album(this.refAlbum,"Awaken, My Love",3,this.rechercheListMusic(this.refAlbum),"../assets/AwakenMyLove.jpg","../assets/AwakenMyLove.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
+                              [new Album(this.refAlbum,"The Lumineers",4,this.rechercheListMusic(this.refAlbum),"../assets/The Lumineers.jpg","../assets/The Lumineers.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
+                              [new Album(this.refAlbum,"Blond",5,this.rechercheListMusic(this.refAlbum),"../assets/Blond.jpg","../assets/Blond.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
+                              [new Album(this.refAlbum,"Carrie&Lowell",6,this.rechercheListMusic(this.refAlbum),"../assets/Carrie&Lowell.jpg","../assets/Carrie&Lowell.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false),],
+                              [new Album(this.refAlbum,"22, A Million ",7,this.rechercheListMusic(this.refAlbum),"../assets/22AMillion.jpg","../assets/22AMillion.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
+                              [new Album(this.refAlbum,"Yellow Brick Road",8,this.rechercheListMusic(this.refAlbum),"../assets/YellowBrickRoad.jpg","../assets/YellowBrickRoad.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
+                              [new Album(this.refAlbum,"Interstellar",9,this.rechercheListMusic(this.refAlbum),"../assets/Interstellar.jpg","../assets/Interstellar.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
+                              [new Album(this.refAlbum,"Wild Youth",10,this.rechercheListMusic(this.refAlbum),"../assets/WildYouth.jpg","../assets/WildYouth.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false),],
+                              [new Album(this.refAlbum,"Dream Your Life Away",11,this.rechercheListMusic(this.refAlbum),"../assets/DreamYourLifeAway.jpg","../assets/DreamYourLifeAway.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
+                              [new Album(this.refAlbum,"Songs From A Room",12,this.rechercheListMusic(this.refAlbum),"../assets/SongsFromARoom.jpg","../assets/SongsFromARoom.png",new Date("2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
+                              [new Album(this.refAlbum,"Z-Sides",13,this.rechercheListMusic(this.refAlbum),"../assets/Z-Sides.jpg","../assets/Z-Sides.png",new Date("01/05/2019"),false,this.getPrice(this.rechercheListMusic(this.refAlbum++)),false)],
                               
                                     
                               ];
-  
-  
+
    tabArtists : Artist[] = [new Artist(this.refArtist,"Andrew Bird",this.rechercheListAlbum(this.refArtist++),"../assets/AndrewBird.jpg","../assets/AndrewBirdProfile.jpg","../assets/AndrewBirdBackground.jpg",false),
                                     new Artist(this.refArtist,"George Ezra",this.rechercheListAlbum(this.refArtist++),"../assets/GeorgeEzra.jpg","../assets/GeorgeEzraProfile.jpg","../assets/GeorgeEzraBackground.jpg",false),
                                     new Artist(this.refArtist,"Heart",this.rechercheListAlbum(this.refArtist++),"../assets/Heart.jpg","../assets/HeartProfile.jpg","../assets/HeartBackground.jpg",false),
@@ -70,6 +69,27 @@ export class ListService {
 
 
   tabUsers : User[] = [new User("administrateur","administrateur"),new User("d","d")];
+
+  getPrice(music:Music[])
+  {
+    let p = 0;
+    if(music.length <=3)
+    {
+      for(let m of music)
+      {
+        p += m.price;
+      }
+      return p;
+    }
+    else
+    {
+      for(let m of music)
+      {
+        p += m.price;
+      }
+      return p - (0.3*p);
+    }
+  }
 
   rechercheListMusic(ref : number):Music[]{
     for(let i  = 0; i < this.tabMusic.length;i++)
@@ -170,7 +190,7 @@ export class ListService {
   }
   updateArtist(oldRef:number,ref:number,name:string,photo:string,profile:string,background:string)
   {
-    if(this.getArtist(ref)==null)
+    if((this.getArtist(ref)==null)||(ref==oldRef))
     {
       this.getArtist(oldRef).ref=ref;
       this.getArtist(ref).name=name;
@@ -193,9 +213,17 @@ export class ListService {
 
   deleteArtist(artist : Artist)
   {
+    for(let a of artist.albums)
+    {
+      for(let m of a.music)
+      {
+        this.deleteMusic(a,m);
+      }
+      this.deleteAlbum(artist,a);
+    }
     this.tabArtists.splice(this.tabArtists.indexOf(artist),1);
   }
-
+  
   
   addAlbum(artist :Artist,ref:number,name : string,photo : string,recordPhoto : string,releaseDate : Date,price : number)
   {
@@ -210,7 +238,7 @@ export class ListService {
   }
   updateAlbum(oldRef:number,ref:number,name:string,photo:string,recordPhoto:string,releaseDate:Date,price:number)
   {
-    if(this.getAlbum(ref)==null)
+    if((this.getAlbum(ref)==null)||(ref==oldRef))
     {
       this.getAlbum(oldRef).ref = ref;
       this.getAlbum(ref).name = name;
@@ -230,7 +258,7 @@ export class ListService {
   
   deleteAlbum(artist : Artist,album : Album)
   {
-    artist.albums.splice(artist.albums.indexOf(album),1);
+    this.tabAlbums[this.tabAlbums.indexOf(artist.albums)].splice(this.tabAlbums[this.tabAlbums.indexOf(artist.albums)].indexOf(album),1);
   }
   
   addMusic(artist : Artist,album : Album,ref:number,name : string,recordPhoto:string,duration:string,price:number)
@@ -242,9 +270,13 @@ export class ListService {
     }
     return false;
   }
+  deleteMusic(album:Album,music : Music)
+  {
+    this.tabMusic[this.tabMusic.indexOf(album.music)].splice(this.tabMusic[this.tabMusic.indexOf(album.music)].indexOf(music),1);
+  }
   updateMusic(oldRef:number,ref:number,name:string,photo:string,duration:string,price:number)
   {
-    if(this.getMusic(ref)==null)
+    if((this.getMusic(ref)==null)||(ref==oldRef))
     {
       this.getMusic(oldRef).ref = ref;
       this.getMusic(ref).name = name;
@@ -300,10 +332,7 @@ export class ListService {
   }
   
   
-  deleteMusic(album:Album,music : Music)
-  {
-    album.music.splice(album.music.indexOf(music),1);
-  }
+  
 
   getUser(name : string)
   {

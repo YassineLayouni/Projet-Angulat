@@ -44,9 +44,10 @@
     </div>
     <div id="update">
         <h1 id="title">Update Artist</h1>
-        <form [formGroup]="updateForm" (ngSubmit)="onUpdateArtist()">
+        <form [formGroup]="updateForm" >
             <input type="number" class="form-control" name="ref" id="red" [placeholder]="'Identification : '+artist.ref" formControlName="ref">
-            <div *ngIf="ref.dirty&&findReference(ref)" class="invalid">Reference already exists</div>
+            <div *ngIf="ref1.touched&&ref1.invalid" class="invalid">Identification is required</div>
+            <div *ngIf="ref1.dirty&&findReference(ref)" class="invalid">Reference already exists</div>
             <br/>
             
             <input type="text" class="form-control" name="name" id="name" [placeholder]="'Name & Last name : '+artist.name" formControlName="name">
@@ -86,7 +87,7 @@
             <br/>
 
             <div id="submitBtns">
-                <button type="submit" [disabled]="updateForm.invalid" id="submit">Update Artist</button>
+                <a [routerLink]="'/Home'"><button (click)="onUpdateArtist()" type="submit" [disabled]="updateForm.invalid||findReference(ref)" id="submit">Update Artist</button></a>
                 <input type="reset" id="reset" value="Reset">
             </div>
         </form>

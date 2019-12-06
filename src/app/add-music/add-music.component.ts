@@ -30,7 +30,12 @@ export class AddMusicComponent implements OnInit {
   }
   onAddMusic(f:NgForm)
   { 
-    alert(this.service.addMusic(this.artist,this.album,f.value['ref'],f.value['name'],"../assets/"+this.photo,f.value['duration'],f.value['customPrice']));
+    if(!f.value['priceCheck']){f.value['customPrice']=0.5}
+    if(this.service.addMusic(this.artist,this.album,f.value['ref'],f.value['name'],"../assets/"+this.photo,f.value['duration'],f.value['customPrice']))
+    {
+      this.album.price = this.service.getPrice(this.album.music);
+      alert("Music has been added successfully");
+    };
   }
   constructor(private service : ListService,private activatedRoute : ActivatedRoute) { }
 
