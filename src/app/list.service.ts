@@ -225,12 +225,12 @@ export class ListService {
   }
   
   
-  addAlbum(artist :Artist,ref:number,name : string,photo : string,recordPhoto : string,releaseDate : Date,price : number)
+  addAlbum(artist :Artist,ref:number,name : string,photo : string,recordPhoto : string,releaseDate : Date,price : number,customPrice : boolean)
   {
     let music : Music[]=[];
     if(this.getAlbum(ref)==null)
     {
-      artist.albums.push(new Album(ref,name,artist.ref,music,photo,recordPhoto,releaseDate,false,price,false));
+      artist.albums.push(new Album(ref,name,artist.ref,music,photo,recordPhoto,releaseDate,false,price,customPrice));
       this.tabMusic.push(music);
       return true;
     }

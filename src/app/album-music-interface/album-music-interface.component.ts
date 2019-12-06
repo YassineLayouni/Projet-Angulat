@@ -17,11 +17,14 @@ export class AlbumMusicInterfaceComponent implements OnInit {
   music : Music[];
   artist : Artist;
   placement:string = "album";
+  onBuy()
+  {
+    alert('this is an Administrator account you cannot bu any products');
+  }
   
 
 
   constructor(private activatedRoute:ActivatedRoute, private service:ListService) { }
-
   ngOnInit() {
     this.idAlbum = this.activatedRoute.snapshot.params['idAlbum'];
     this.album = this.service.getAlbum(this.idAlbum);

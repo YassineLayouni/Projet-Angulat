@@ -33,7 +33,10 @@ export class AddMusicComponent implements OnInit {
     if(!f.value['priceCheck']){f.value['customPrice']=0.5}
     if(this.service.addMusic(this.artist,this.album,f.value['ref'],f.value['name'],"../assets/"+this.photo,f.value['duration'],f.value['customPrice']))
     {
-      this.album.price = this.service.getPrice(this.album.music);
+      if(!this.album.customPrice)
+      {
+        this.album.price = this.service.getPrice(this.album.music);
+      }
       alert("Music has been added successfully");
     };
   }
