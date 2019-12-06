@@ -14,7 +14,7 @@
                 <br/>
                 <div id="price">
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customPriceSwitch" name="customPriceCheck" formControlName="checkCustomPrice">
+                        <input type="checkbox" (click)="onCheck()" class="custom-control-input" id="customPriceSwitch" name="customPriceCheck" formControlName="checkCustomPrice">
                         <label class="custom-control-label" for="customPriceSwitch" ></label>
                     </div>
                     <input type="number" class="form-control" id="priceInput" name="priceInput"  placeholder="Custom Price" formControlName="price">

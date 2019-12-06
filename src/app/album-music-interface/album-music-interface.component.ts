@@ -21,6 +21,14 @@ export class AlbumMusicInterfaceComponent implements OnInit {
   {
     alert('this is an Administrator account you cannot bu any products');
   }
+  added()
+  {
+    alert('Record added to playlist');
+  }
+  notAdded()
+  {
+    alert('Record already in playlist');
+  }
   
 
 

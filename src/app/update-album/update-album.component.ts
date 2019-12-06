@@ -25,6 +25,8 @@ export class UpdateAlbumComponent implements OnInit {
   onUpdateAlbum()
   {
     if(this.name == "")this.updateForm.get('name').setValue(this.album.name);
+    if(!this.checkCustomPrice)this.updateForm.get('price').setValue(this.service.getPrice(this.album.music));
+    if((this.checkCustomPrice)&&(this.price == null))this.updateForm.get('price').setValue(this.album.price);
     if(this.service.updateAlbum(this.refAlbum,this.ref,this.name,"../assets/"+this.photo,"../assets/"+this.recordPhoto,this.releaseDate,this.price))
     {
       alert("Album Updated Successfully");

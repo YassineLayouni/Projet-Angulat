@@ -32,7 +32,10 @@ export class AddArtistComponent implements OnInit {
     this.backgroundPhoto = event.target.files[0].name;
   }
   onAddArtist(f:NgForm){
-    this.service.addArtist(f.value['ref'],f.value['name'],"../assets/"+this.photo,"../assets/"+this.profilePhoto,"../assets/"+this.backgroundPhoto);
+    if(this.service.addArtist(f.value['ref'],f.value['name'],"../assets/"+this.photo,"../assets/"+this.profilePhoto,"../assets/"+this.backgroundPhoto))
+    {
+      alert("Artist added successfully");
+    };
   }
   constructor(private service:ListService) { }
   

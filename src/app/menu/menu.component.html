@@ -24,7 +24,7 @@
             <a class="nav-link interface" style="transition:all 0.5s, opacity 0.5s 0.2s" [ngStyle]="{opacity : interfaceOpacity}" routerLinkActive="active"  [routerLink]="'/Search'">{{chercher|logoChercher}}</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link interface" style="transition:all 0.5s,opacity 0.5s 0.3s" [ngStyle]="{opacity : interfaceOpacity}" href="#">{{liked|avantPlaylist}}</a>
+            <a class="nav-link interface" style="transition:all 0.5s,opacity 0.5s 0.3s" [ngStyle]="{opacity : interfaceOpacity}" routerLinkActive="active" [routerLink]="'/PlayList'">{{liked|avantPlaylist}}</a>
         </li>
         <li class="nav-item">
             <a class="nav-link interface" style="transition:all 0.5s,opacity 0.5s 0.45s" [ngStyle]="{opacity : interfaceOpacity}" routerLinkActive="active" [routerLink]="'/SignIn'" (click)="onChangeSignIn()">{{SignOut|avantLogin}}</a>

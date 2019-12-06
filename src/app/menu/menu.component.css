@@ -105,7 +105,7 @@ hr{
     display:flex;
     justify-content: center;
     align-items: center;
-    width : 30  vw;
+    width : auto;
     height: 15vh;
     position: absolute;
 }

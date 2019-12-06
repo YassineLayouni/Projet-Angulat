@@ -68,7 +68,24 @@ export class ListService {
                                   ];
 
 
-  tabUsers : User[] = [new User("administrateur","administrateur"),new User("d","d")];
+  tabUsers : User[] = [new User("administrateur","administrateur")];
+  playList : Music[] = [];
+  addPlayList(music:Music)
+  {
+    for(let m of this.playList )
+    {
+      if(m.ref == music.ref)
+      {
+        return false;
+      }
+    }
+    this.playList.push(music);
+    return true;
+  }
+  deleteFromPlayList(music:Music)
+  {
+    this.playList.splice(this.playList.indexOf(music),1);
+  }
 
   getPrice(music:Music[])
   {

@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   interfaceOpacity : string = "0";
   menuReturnDelay : string ="0";
   SignOut : string = "Sign Out";
-  liked : string = "LIKED";
+  liked : string = "PLAYLIST";
   chercher :string = "SEARCH";
   acceuil : string = "HOME";
   expandLines()

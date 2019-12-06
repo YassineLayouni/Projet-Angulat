@@ -28,6 +28,7 @@ import { UpdateMusicComponent } from './update-music/update-music.component';
 import { SearchComponent } from './search/search.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { PlayListComponent } from './play-list/play-list.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     SearchComponent,
     SignInComponent,
     SignUpComponent,
+    PlayListComponent,
   ],
   imports: [
     BrowserModule,

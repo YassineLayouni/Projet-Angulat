@@ -1,0 +1,24 @@
+<img id="background" src="../assets/PlayListWallpaper.jpg">
+<div class="container" style="width:70%">
+    <div id="mainContainer" style="overflow-y : auto; overflow-x: hidden;" >
+        <div class="musicContainer">
+            <ul class="list-group">
+                <ng-container *ngFor="let m of playList">
+                    <li class="list-group-item">
+                        <div id="cardContainer">
+                            <app-display-music [music]="m" [placement]="placement"></app-display-music>
+                            <span style="margin-top: 5vh;">{{m.name}}</span>
+                            <span style="margin-top: 5vh;margin-left: 1vw;">{{m.duration}}</span>
+                        </div>
+                        
+                        <div id="actions">
+                            <span>{{m.price|currency}}</span>
+                            <a (click)="onBuy()"><i class="fas fa-shopping-cart"></i></a>
+                            <a (click)="this.service.deleteFromPlayList(m)"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>
