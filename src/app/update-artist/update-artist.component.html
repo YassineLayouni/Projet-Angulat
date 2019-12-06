@@ -45,44 +45,40 @@
     <div id="update">
         <h1 id="title">Update Artist</h1>
         <form [formGroup]="updateForm" (ngSubmit)="onUpdateArtist()">
-            <label for="ref">Identification</label>
-            <input type="number" class="form-control" name="ref" id="red" [placeholder]="artist.ref" formControlName="ref">
+            <input type="number" class="form-control" name="ref" id="red" [placeholder]="'Identification : '+artist.ref" formControlName="ref">
+            <div *ngIf="ref.dirty&&findReference(ref)" class="invalid">Reference already exists</div>
             <br/>
             
-            <label for="name">Name & Last Name</label>
-            <input type="text" class="form-control" name="name" id="name" [placeholder]="artist.name" formControlName="name">
+            <input type="text" class="form-control" name="name" id="name" [placeholder]="'Name & Last name : '+artist.name" formControlName="name">
             <br/>
             
-            <label>Photo</label>
             <div id="photo">
                <label for="photoInput">
                    <div class="photoInputContainer">
                        <div class="photoContainer">CHOOSE FILE</div>
-                       <div><input type="text" class="photoName" [placeholder]="artist.photoSrc" name="photoName"  [value]="photo"  disabled></div>
+                       <div><input type="text" class="photoName" [placeholder]="'photo : '+artist.photoSrc" name="photoName"  [value]="photo"  disabled></div>
                    </div>
                 </label>
                 <input type="file" class="photoInput1" id="photoInput" name="photo" formControlName="photo"/>
             </div>
             <br/>
 
-            <label>Profile Photo</label>
             <div class="photo">
                <label for="profilePhotoInput">
                    <div class="photoInputContainer">
                        <div class="photoContainer">CHOOSE FILE</div>
-                       <div><input type="text" class="photoName" [placeholder]="artist.profilePhoto" name="profilePhotoName" [value]="profilePhoto"   disabled></div>
+                       <div><input type="text" class="photoName" [placeholder]="'profile : '+artist.profilePhoto" name="profilePhotoName" [value]="profilePhoto"   disabled></div>
                    </div>
                 </label>
                 <input type="file" class="photoInput1" id="profilePhotoInput" name="profilePhoto" formControlName="profilePhoto" />
             </div>
             <br/>
 
-            <label>background Photo</label>
             <div class="photo">
                <label for="backgroundPhotoInput">
                    <div class="photoInputContainer">
                        <div class="photoContainer">CHOOSE FILE</div>
-                       <div><input type="text" class="photoName" [placeholder]="artist.background" name="backgroundPhotoName" [value]="backgroundPhoto" disabled></div>
+                       <div><input type="text" class="photoName" [placeholder]="'background : '+artist.background" name="backgroundPhotoName" [value]="backgroundPhoto" disabled></div>
                    </div>
                 </label>
                 <input type="file" class="photoInput1" id="backgroundPhotoInput" name="backgroundPhoto" formControlName="backgroundPhoto"/>
